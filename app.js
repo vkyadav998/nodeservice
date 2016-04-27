@@ -6,15 +6,13 @@ var bodyParser = require('body-parser');
 var rest = require("./restservice/rest");
 
 
-app.use("/register", rest);
-
-
 app.use(bodyParser.json({limit: '10mb'})); 
 app.use(bodyParser.urlencoded({limit: '10mb', extended: true })); 
 
 //For static pages only
 app.use(express.static('public'));
 
+app.use("/register", rest);
 
 
 app.listen(3000, function () {
