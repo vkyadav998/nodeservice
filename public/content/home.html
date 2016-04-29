@@ -1,17 +1,19 @@
 
 <div class="col-sm-4">
-	<form name="">
+
 	<h3 class="text-center bg-primary" style="padding: 10px;">Login Here</h3>
+	<form name="mylogin" novalidate>
 	  <div class="form-group">
 	    <label>Email address</label>
-	    <input type="email" class="form-control" placeholder="Email">
+	    <input type="email" class="form-control"  ng-model="check.email">
 	  </div>
 	  <div class="form-group">
 	    <label>Password</label>
-	    <input type="password" class="form-control" placeholder="Password">
+	    <input type="password" class="form-control"  ng-model="check.password">
 	  </div>
-	  <button type="submit" class="btn btn-default">Submit</button>
+	  <button type="submit" class="btn btn-default" ng-click="login()">Submit</button>
 	</form>
+
 </div>
 
 <div class="col-sm-4">
@@ -20,35 +22,41 @@
 </div>
 
 <div class="col-sm-4" style="background-color:rgba(128, 128, 128, 0.44);;padding:12px;border-radius:10px;">
-	<form name="">
+	<form name="myform" novalidate>
 	<h3 class="text-center bg-primary" style="padding: 10px;">Login Here</h3>
-	  	
-	
-	  <div class="form-group">
+
+
+	  <div class="form-group" ng-class="{'has-error':( myform.username.$touched && myform.username.$invalid)||(myform.username.$invalid && submitreg)}">
 	    <label>Name</label>
-	    <input type="text" class="form-control" ng-model="user.name" placeholder="Vipin yadav">
+	    <input type="text" class="form-control" ng-model="user.name"  name="username" required>
+		  <p class="required" ng-show="( myform.username.$touched && myform.username.$invalid )||(myform.username.$invalid && submitreg) ">this field is required</p>
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group" ng-class="{'has-error':( myform.mobile.$touched && myform.mobile.$invalid)||(myform.mobile.$invalid && submitreg)}">
 	    <label>Mobile</label>
-	    <input type="text" class="form-control" ng-model="user.mobile" placeholder="9769939005">
+	    <input type="text" class="form-control" ng-model="user.mobile" required  name="mobile">
+		<p class="required" ng-show="( myform.mobile.$touched && myform.mobile.$invalid)||(myform.mobile.$invalid && submitreg)">this field is required</p>
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group" ng-class="{'has-error':( myform.email.$touched && myform.email.$invalid)||(myform.email.$invalid && submitreg)}">
 	    <label>Email</label>
-	    <input type="text" class="form-control" ng-model="user.mail" placeholder="vkyadav998@gmail.com">
+	    <input type="text" class="form-control" ng-model="user.mail" required  name="email">
+		<p class="required" ng-show="( myform.email.$touched && myform.email.$invalid)||(myform.email.$invalid && submitreg) ">this field is required</p>
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group" ng-class="{'has-error':( myform.subject.$touched && myform.subject.$invalid)||(myform.subject.$invalid && submitreg)}">
 	    <label>Subject</label>
-	    <input type="text" class="form-control" ng-model="user.subject" placeholder="">
+	    <input type="text" class="form-control" ng-model="user.subject" required  name="subject">
+		<p class="required" ng-show="( myform.subject.$touched && myform.subject.$invalid)||(myform.subject.$invalid && submitreg) ">this field is required</p>
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group" ng-class="{'has-error':( myform.type.$touched && myform.type.$invalid)||(myform.type.$invalid && submitreg)}">
 	    <label>Type</label>
-	    <input type="text" class="form-control" ng-model="user.type" placeholder="">
+	    <input type="text" class="form-control" ng-model="user.type" required  name="type">
+		<p class="required" ng-show="( myform.type.$touched && myform.type.$invalid)||(myform.type.$invalid && submitreg) ">this field is required</p>
 	  </div>
-	  <div class="form-group">
+	  <div class="form-group" ng-class="{'has-error':( myform.password.$touched && myform.password.$invalid)||(myform.password.$invalid && submitreg)}">
 	    <label>Choose Password</label>
-	    <input type="password" class="form-control" ng-model="user.password"placeholder="Password">
+	    <input type="password" class="form-control" ng-model="user.password" required  name="password">
+		<p class="required" ng-show="( myform.password.$touched && myform.password.$invalid)||(myform.password.$invalid && submitreg) ">this field is required</p>
 	  </div>
-	  
-	  <button type="submit" class="btn btn-default" ng-click="register()">Submit</button>
+
+	  <button type="submit" class="btn btn-default" ng-click="register(myform,submitreg)">Submit</button>
 	</form>
 </div>

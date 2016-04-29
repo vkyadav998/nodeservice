@@ -17,11 +17,41 @@ myApp.config(['$routeProvider',function($routeProvider) {
 	
 }]);
 
+myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,$window) {
 
 
-myApp.controller('homeCtrl', ['$scope','$http', function($scope,$http) {
 	
-	$scope.register=function(){
+
+
+
+	$scope.login=function () {
+
+		debugger;
+		console.log($scope.check);
+		window.location.replace('#/menu');
+
+
+		//to get value in home page if want
+		$http({
+			method: 'GET',
+			url: '/register'
+		}).success(function(res){
+			console.log(res);
+				return res;
+			}).error(function(res) {
+			console.log("error");
+		});
+
+
+	}
+	
+	$scope.register=function(form,submitreg){
+		debugger;
+		console.log(form.$valid);
+		if(form.$invalid){
+			$scope.submitreg=true;
+			return;
+		}
 		console.log($scope.user);
 		var reqdata =$scope.user;
 		
@@ -34,15 +64,27 @@ myApp.controller('homeCtrl', ['$scope','$http', function($scope,$http) {
 			data : reqdata
 		}).success(function(response) {
 			console.log("success");
+			alert("Hello! I am an alert box!!");
 		}).error(function(response) {
 			console.log("error");
 		});
-		
 	}
 
 }]);
 
-myApp.controller('menuCtrl', ['$scope', function($scope) {
+myApp.controller('menuCtrl', ['$scope','$http','$window', function($scope,$http,$window) {
+
+// to get value in the menu page
+	$http({
+		method: 'GET',
+		url: '/register'
+	}).success(function(res){
+		$scope.user=res.data;
+		console.log(res);
+		return res;
+	}).error(function(res) {
+		console.log("error");
+	});
 
 
 }]);
