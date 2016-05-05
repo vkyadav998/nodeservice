@@ -19,5 +19,4 @@ router.get('/', function (req, res) {
     getvalue.insertservice(res);
 
 });
-
 module.exports = router;
