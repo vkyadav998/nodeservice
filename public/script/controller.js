@@ -19,18 +19,10 @@ myApp.config(['$routeProvider',function($routeProvider) {
 
 myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,$window) {
 
-
-	
-
-
-
 	$scope.login=function () {
-
+		window.location.replace('#/menu');
 		debugger;
 		console.log($scope.check);
-		window.location.replace('#/menu');
-
-
 		//to get value in home page if want
 		$http({
 			method: 'GET',
@@ -44,7 +36,7 @@ myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,
 
 
 	}
-	
+
 	$scope.register=function(form,submitreg){
 		debugger;
 		console.log(form.$valid);
@@ -79,7 +71,7 @@ myApp.controller('menuCtrl', ['$scope','$http','$window', function($scope,$http,
 		method: 'GET',
 		url: '/register'
 	}).success(function(res){
-		$scope.user=res.data;
+		$scope.user=res;
 		console.log(res);
 		return res;
 	}).error(function(res) {

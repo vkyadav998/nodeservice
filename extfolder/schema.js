@@ -6,8 +6,11 @@ var Schema = mongoose.Schema;
 
 var kittySchema = new Schema({
     name: String,
+    mobile:Number,
+    email:String,
     subject:String,
-    type:Number
-}, {collection:'userrrr'});
+    type:String,
+    password:String
+}, {collection:'user'});
 
 mongoose.model('Kitten', kittySchema);

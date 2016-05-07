@@ -7,15 +7,19 @@ var Kitten = mongoose.model('Kitten');
 
 router.get('/', function(req, res)  {
     var thor = new Kitten({
-        name: "vipinkumar",
-        subject:"hindi",
-        type:11
+        name: "vipin",
+        mobile:9769939005,
+        email:"vkyadav998@gmail.com",
+        subject:"English",
+        type:"uk",
+        password:"pass123"
     });
 
     thor.save(function(err, thor) {
         if (err) return console.error(err);
         console.dir(thor);
     });
-    res.json({ message: thor });
+    res.json([thor ]);
 });
+
 module.exports = router;
