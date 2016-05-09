@@ -12,6 +12,7 @@
 	    <input type="password" class="form-control"  ng-model="check.password">
 	  </div>
 	  <button type="submit" class="btn btn-default" ng-click="login()">Submit</button>
+	  <button type="submit" class="btn btn-default" ng-click="checkone()">Find 1</button>
 	</form>
 
 </div>
@@ -33,12 +34,12 @@
 	  </div>
 	  <div class="form-group" ng-class="{'has-error':( myform.mobile.$touched && myform.mobile.$invalid)||(myform.mobile.$invalid && submitreg)}">
 	    <label>Mobile</label>
-	    <input type="text" class="form-control" ng-model="user.mobile" required  name="mobile">
+	    <input type="number" class="form-control" ng-model="user.mobile" required  name="mobile">
 		<p class="required" ng-show="( myform.mobile.$touched && myform.mobile.$invalid)||(myform.mobile.$invalid && submitreg)">this field is required</p>
 	  </div>
 	  <div class="form-group" ng-class="{'has-error':( myform.email.$touched && myform.email.$invalid)||(myform.email.$invalid && submitreg)}">
 	    <label>Email</label>
-	    <input type="text" class="form-control" ng-model="user.mail" required  name="email">
+	    <input type="email" class="form-control" ng-model="user.email" required  name="email">
 		<p class="required" ng-show="( myform.email.$touched && myform.email.$invalid)||(myform.email.$invalid && submitreg) ">this field is required</p>
 	  </div>
 	  <div class="form-group" ng-class="{'has-error':( myform.subject.$touched && myform.subject.$invalid)||(myform.subject.$invalid && submitreg)}">

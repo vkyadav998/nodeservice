@@ -9,7 +9,7 @@ myApp.config(['$routeProvider',function($routeProvider) {
 	})
 	.when('/menu', {
 		templateUrl : 'content/menu.html',
-		controller : 'menuCtrl'
+		controller : 'homeCtrl'
 	})
 	.otherwise({
 		redirectTo : '/home'
@@ -56,12 +56,11 @@ myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,
 			data : reqdata
 		}).success(function(response) {
 			console.log("success");
-			alert("Hello! I am an alert box!!");
+			alert("DATA Inserted .............!!");
 		}).error(function(response) {
 			console.log("error");
 		});
 	}
-
 }]);
 
 myApp.controller('menuCtrl', ['$scope','$http','$window', function($scope,$http,$window) {

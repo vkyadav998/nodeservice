@@ -6,20 +6,26 @@ require('./schema');
 var Kitten = mongoose.model('Kitten');
 
 router.get('/', function(req, res)  {
-    var thor = new Kitten({
-        name: "vipin",
-        mobile:9769939005,
-        email:"vkyadav998@gmail.com",
-        subject:"English",
-        type:"uk",
-        password:"pass123"
+    Kitten.find({}, function (err, docs){
+        if(err){
+            console.log(err);
+        }
+        res.json(docs);
+        console.log("user : " + docs);
     });
 
-    thor.save(function(err, thor) {
+});
+
+router.post('/', function(req, res)  {
+    var user =req.body;
+    console.log("request = " + req.body);
+    var user = new Kitten(user);
+
+    user.save(function(err, user) {
         if (err) return console.error(err);
-        console.dir(thor);
+        console.dir(user);
     });
-    res.json([thor ]);
+    res.json([user ]);
 });
 
 module.exports = router;
