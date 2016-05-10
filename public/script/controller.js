@@ -36,20 +36,7 @@ myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,
 	}
 
 
-	$scope.checkone=function () {
-		window.location.replace('#/menu');
-		debugger;
-		$http({
-			method: 'GET',
-			url: '/register/vk'
-		}).success(function(res){
-			$scope.user = {"user":res};
-			console.log(res);
-			return res;
-		}).error(function(res) {
-			console.log("error");
-		});
-	}
+
 	$scope.register=function(form,submitreg){
 		debugger;
 		console.log(form.$valid);
@@ -91,6 +78,20 @@ myApp.controller('menuCtrl', ['$scope','$http','$window', function($scope,$http,
 		console.log("error");
 	});
 
+	$scope.checkone=function () {
+		window.location.replace('#/menu');
+		debugger;
+		$http({
+			method: 'GET',
+			url: '/register/vk'
+		}).success(function(res){
+			$scope.user = {"user":res};
+			console.log(res);
+			return res;
+		}).error(function(res) {
+			console.log("error");
+		});
+	}
 
 
 }]);
