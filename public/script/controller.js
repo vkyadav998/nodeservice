@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp',['ngRoute']);
+var myApp = angular.module('myApp',['ngRoute','720kb.datepicker']);
 
 
 myApp.config(['$routeProvider',function($routeProvider) {
@@ -18,10 +18,12 @@ myApp.config(['$routeProvider',function($routeProvider) {
 }]);
 
 myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,$window) {
+	$scope.user = {'date':new Date()};
 
 	$scope.login=function () {
 		window.location.replace('#/menu');
 		debugger;
+		console.log($scope);
 		console.log($scope.check);
 		//to get value in home page if want
 		$http({
@@ -37,8 +39,10 @@ myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,
 
 
 
+
 	$scope.register=function(form,submitreg){
 		debugger;
+
 		console.log(form.$valid);
 		if(form.$invalid){
 			$scope.submitreg=true;

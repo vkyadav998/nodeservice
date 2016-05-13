@@ -10,7 +10,8 @@ var kittySchema = new Schema({
     email:String,
     subject:String,
     type:String,
-    password:String
+    password:String,
+    date:String
 }, {collection:'user'});
 
 mongoose.model('Kitten', kittySchema);
