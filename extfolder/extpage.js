@@ -15,8 +15,10 @@ router.get('/', function(req, res)  {
     });
 });
 
-router.get('/vk', function(req, res)  {
-    Kitten.findOne({ email:"vk@gmail.com" },function (err, docs){
+router.post('/vk', function(req, res)  {
+    var check=req.body;
+
+    Kitten.findOne(check.email,function (err, docs){
         if(err){
             console.log(err);
         }
