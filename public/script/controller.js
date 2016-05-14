@@ -27,14 +27,9 @@ myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,
 		console.log(reqdata);
 		//to get value in home page if want
 		$http({
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json'
-			},
-			url: '/register/vk',
-			data : reqdata
+			method: 'get',
+			url: '/register/vk'
 		}).success(function(res){
-			$scope.user = {"user":res};
 			console.log(res);
 				return res;
 			}).error(function(res) {
@@ -76,7 +71,7 @@ myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,
 myApp.controller('menuCtrl', ['$scope','$http','$window', function($scope,$http,$window) {
 
 // to get value in the menu page
-	/*$http({
+	$http({
 		method: 'GET',
 		url: '/register'
 	}).success(function(res){
@@ -85,7 +80,7 @@ myApp.controller('menuCtrl', ['$scope','$http','$window', function($scope,$http,
 		return res;
 	}).error(function(res) {
 		console.log("error");
-	});*/
+	});
 
 	$scope.checkone=function () {
 		window.location.replace('#/menu');
