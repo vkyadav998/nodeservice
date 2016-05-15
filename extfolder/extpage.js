@@ -16,8 +16,9 @@ router.get('/', function(req, res)  {
 });
 
 router.post('/vk', function(req, res)  {
+    var check=req.body;
 
-    Kitten.findOne(({email:'vkyadav998@gmail.com'}),function (err, docs){
+    Kitten.findOne({'email':check.email},function (err, docs){
         if(err){
             console.log(err);
         }
