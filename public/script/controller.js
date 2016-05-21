@@ -1,5 +1,4 @@
-var myApp = angular.module('myApp',['ngRoute','720kb.datepicker']);
-
+var myApp = angular.module('myApp',['ngRoute','720kb.datepicker', 'ngCookies']);
 
 myApp.config(['$routeProvider',function($routeProvider) {
 	
@@ -14,89 +13,33 @@ myApp.config(['$routeProvider',function($routeProvider) {
 	.otherwise({
 		redirectTo : '/home'
 	});
-	
 }]);
 
-myApp.controller('homeCtrl', ['$scope','$http','$window', function($scope,$http,$window) {
+myApp.controller('homeCtrl', ['$scope','$http','$window','$cookies','ADD_SERVICE', function($scope,$http,$window,$cookies,ADD_SERVICE) {
+
+	$scope.ADD_SERVICE=ADD_SERVICE;
 	$scope.user = {'date':new Date()};
 
 	$scope.login=function () {
-		window.location.replace('#/menu');
-		debugger;
-		var reqdata =$scope.check;
-		console.log(reqdata);
-		//to get value in home page if want
-		$http({
-			method: 'get',
-			url: '/register/vk'
-		}).success(function(res){
-			console.log(res);
-				return res;
-			}).error(function(res) {
-			console.log("error");
-		});
-	}
-
-
-
+		ADD_SERVICE.login($scope);
+	};
 
 	$scope.register=function(form,submitreg){
-		debugger;
-
-		console.log(form.$valid);
-		if(form.$invalid){
-			$scope.submitreg=true;
-			return;
-		}
-		console.log($scope.user);
-		var reqdata =$scope.user;
-		
-		$http({
-			method : 'POST',
-			headers : {                                            //header is optional for first time
-				'Content-Type' : "application/json"
-			},
-			url : '/register',
-			data : reqdata
-		}).success(function(response) {
-			console.log("success");
-			alert("DATA Inserted .............!!");
-		}).error(function(response) {
-			console.log("error");
-		});
+		ADD_SERVICE.register(form,submitreg,$scope);
+	};
+	
+	$scope.logout=function () {
+		ADD_SERVICE.logout($scope);
 	}
-
 }]);
 
-myApp.controller('menuCtrl', ['$scope','$http','$window', function($scope,$http,$window) {
+myApp.controller('menuCtrl', ['$scope','$http','$window','ADD_SERVICE', function($scope,$http,$window,ADD_SERVICE) {
 
-// to get value in the menu page
-	$http({
-		method: 'GET',
-		url: '/register'
-	}).success(function(res){
-		$scope.user=res;
-		console.log(res);
-		return res;
-	}).error(function(res) {
-		console.log("error");
-	});
+	$scope.ADD_SERVICE=ADD_SERVICE;
 
-	$scope.checkone=function () {
-		window.location.replace('#/menu');
-		debugger;
-		$http({
-			method: 'GET',
-			url: '/register/vk'
+	ADD_SERVICE.getuserdata($scope);
 
-		}).success(function(res){
-			$scope.user = {"user":res};
-			console.log(res);
-			return res;
-		}).error(function(res) {
-			console.log("error");
-		});
-	}
-
-
+	$scope.logout=function () {
+		ADD_SERVICE.logout($scope);
+	};
 }]);

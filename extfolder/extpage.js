@@ -15,8 +15,8 @@ router.get('/', function(req, res)  {
     });
 });
 
-router.post('/vk', function(req, res)  {
-    var check=req.body;
+router.get('/vk', function(req, res)  {
+    var check=req.query;
 
     Kitten.findOne({'email':check.email},function (err, docs){
         if(err){
