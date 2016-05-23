@@ -4,24 +4,7 @@
 var app = angular.module('myApp');
 app.service('ADD_SERVICE',function($http,$window,$cookies){
 
-   /* /!** TOKEN *!/
-    this.saveToken = function(res) {
-        $window.localStorage['access-token'] = res;
-        $cookies.putObject("access-token", res);
-    };
-
-    this.getToken = function() {
-        var acessToken = $window.localStorage['access-token'];
-        var aret = $cookies.getObject("access-token");
-        return aret;
-    };
-
-    this.clearToken = function() {
-        $cookies.remove("access-token");
-    };
-*/
     this.login=function ($scope) {
-        window.location.replace('#/menu');
         var reqdata =$scope.check;
         console.log(reqdata);
         //to get value in home page if want
@@ -37,7 +20,7 @@ app.service('ADD_SERVICE',function($http,$window,$cookies){
             if(res !=null && res.hasOwnProperty('email') && reqdata.email === res.email) {
                 $cookies.put('Email', res.email);
                 console.log('success');
-                $scope.user= {user:res};
+                window.location.replace('#/menu');
             }else{
                 console.log('Error');
             }
@@ -67,7 +50,6 @@ app.service('ADD_SERVICE',function($http,$window,$cookies){
         });
     }
 
-
     this.register=function(form,submitreg,$scope){
         console.log(form.$valid);
         if(form.$invalid){
@@ -93,7 +75,11 @@ app.service('ADD_SERVICE',function($http,$window,$cookies){
     }
 
     this.logout=function($scope){
+        window.location.replace('#/home');
         $cookies.remove('Email');
     }
 
+    this.adminlogin=function($scope){
+         window.location.replace('inbox.html');
+    }
 });
