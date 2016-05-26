@@ -15,3 +15,14 @@ var kittySchema = new Schema({
 }, {collection:'user'});
 
 mongoose.model('Kitten', kittySchema);
+
+var orderSchema = new Schema({
+    uid: String,   //  IF WANT TO PRODUCE objectId of user collection -- {type: Schema.Types.ObjectId, ref: 'user'},
+    itom: String,
+    type:String,
+    address:String,
+    pin:Number,
+    date:String
+}, {collection:'order'});
+
+mongoose.model('corder', orderSchema);

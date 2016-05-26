@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    <h1>hellow this is admin service area.</h1>
-    <li><a type="submit" class="btn btn-primary" ng-click="logout()" style="color:#fff;">LOG OUT</a></li>
-</body>
-</html>
+    <header></header>
+
+    <div class="col-sm-4" ng-repeat="user in user">
+        <div class="list-group">
+            <a class="list-group-item active"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{"  "+user.name}}'s profile
+                <span class="btn btn-sm btn-success pull-right" style="padding:1px 10px;" ng-click="user_order(user.email)"><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Order</span></a>
+            <a class="list-group-item">{{user._id}}</a>
+            <a class="list-group-item">{{user.email}}</a>
+            <a class="list-group-item">{{user.mobile}}</a>
+            <a class="list-group-item">{{user.password}}</a>
+            <a class="list-group-item">{{user.date}}</a>
+            <a class="list-group-item">{{user.subject+ " , " +user.type}}</a>
+        </div>
+    </div>

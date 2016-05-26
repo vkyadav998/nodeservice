@@ -36,6 +36,7 @@ myApp.controller('homeCtrl', ['$scope','$http','$window','$cookies','ADD_SERVICE
 		ADD_SERVICE.adminlogin($scope);
 	};
 
+	/*// this is for if message is using in controller only
     $scope.resetmessage = function($scope) {
 		var vm = this;
 		$timeout(function(){
@@ -45,22 +46,23 @@ myApp.controller('homeCtrl', ['$scope','$http','$window','$cookies','ADD_SERVICE
 			ADD_SERVICE.successmsg="";
 			ADD_SERVICE.errormsg="";
 
-			/*$scope.$watch("ADD_SERVICE", function(){
+			/!*$scope.$watch("ADD_SERVICE", function(){
 				$scope.ADD_SERVICE = ADD_SERVICE;
-			});*/
+			});*!/
 		}, 5000);
-	};
+	};*/
 
     $scope.msgcall=function () {
+       debugger;
         ADD_SERVICE.error=true;
         ADD_SERVICE.errormsg="Message Not successfully Generated.";
-		$scope.resetmessage();
+		ADD_SERVICE.resetmessage();
     }
 
 	$scope.nmsgcall=function () {
 		ADD_SERVICE.success=true;
 		ADD_SERVICE.successmsg="Message successfully Generated.";
-		//$scope.resetmessage();
+		ADD_SERVICE.resetmessage();
 	}
 
 }]);
@@ -77,6 +79,16 @@ myApp.controller('menuCtrl', ['$scope','$http','$window','ADD_SERVICE', function
 
 	$scope.adminlogin=function () {
 		ADD_SERVICE.adminlogin($scope);
+	};
+	$scope.itom=ADD_SERVICE.itom;
+
+	$scope.custOrder=function () {
+		ADD_SERVICE.custOrder($scope);
+	};
+
+	$scope.myorder=function () {
+		$scope.morder=true;
+		ADD_SERVICE.myorder($scope);
 	};
 
 }]);
