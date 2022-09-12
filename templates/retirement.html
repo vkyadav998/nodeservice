@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<head>
+    <title>Turtlemint</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <style>
+        body{
+            margin: 0px;
+        }
+        .body {
+            font-family: Roboto;
+            font-size: 12px;
+        }
+
+        .medfont {
+            font-weight: 400;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        .banner {
+            background-color: #FFD255;
+            border-bottom-right-radius: 200px;
+            width: 77%;
+            height: 116px;
+            display: -webkit-box;
+            display: inline-flex;
+        }
+
+        .light {
+            font-weight: 300;
+            margin-bottom: 3px;
+        }
+
+        .banner-content {
+            width: 60%;
+            margin: 10px 15px;
+        }
+
+        .branding {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: space-between;
+            justify-content: space-between;
+            margin: 18px 30px 10px 30px ;
+        }
+
+        .chip {
+            border-radius: 20px;
+            background-color: #e2fcf1;
+            color: #30443f;
+            padding: 3px 16px;
+            margin-top: 3px;
+            font-size: 11px;
+        }
+
+        .premium {
+            display: -webkit-box;
+            display: flex;
+            border-top: 1px solid #D8D8D8;
+            border-bottom: 1px solid #D8D8D8;
+            padding: 16px 0px;
+        }
+
+        .premium .box {
+            width: 45%;
+            padding-left: 30px;
+        }
+
+        .amount {
+            margin: 7px 0 0 10px;
+        }
+
+        .primary {
+            color: #009F69;
+        }
+
+        .container {
+            padding: 0 30px;
+        }
+
+        .title {
+            margin: 7px 0px;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .just-content {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: space-around;
+            justify-content: space-around;
+        }
+
+        .eqSection {
+            width: 32%;
+            padding: 0px 15px 0px 0px
+        }
+
+        .eqSection img {
+            width: 90px;
+            height: 70px;
+            margin: -5px -5px -5px -10px;
+        }
+
+        .buyNow {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #D8D8D8;
+        }
+
+        .feature {
+            display: -webkit-box;
+            display: flex;
+            align-items: center;
+            padding: 3px 0px;
+            /* position: relative; */
+        }
+
+        .feature p {
+            padding-left: 7px;
+            width: 215px;
+            font-family: Roboto;
+            font-size: 12px;
+            /* line-height: 13px; */
+        }
+
+        .feature img {
+            height: 40px;
+            width: 40px;
+            padding-left: 10px;
+        }
+
+        ul{
+            width:100%;
+            margin-bottom:5px;
+            overflow:hidden;
+            margin-left: -40px;
+            margin-top: 0px;
+        }
+
+        li{
+            float:left;
+            display:inline;
+        }
+
+        .double li  { width:49%;}
+
+        .double li:nth-child(even) { 
+            margin-left: 2%;   
+        }
+
+        .riders {
+            border-top: 1px solid #D8D8D8;
+        }
+
+        .rider-data {
+            display: -webkit-box;
+            display: flex;
+            padding-bottom: 5px;
+        }
+
+        .footer {
+            background-color: #EDF8F5;
+            display: -webkit-box;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            padding-top: 10px;
+            position: absolute; 
+            top:753px;
+            width: 100%;
+        }
+
+        .flex {
+            display: -webkit-box;
+            display: flex
+        }
+
+        .bold {
+            font-weight: 600;
+        }
+
+        .font10 {
+            font-size: 10px;
+            width: 230px;
+        }
+
+        .font14 {
+            font-size: 14px;
+        }
+
+        .font16 {
+            font-size: 16px;
+        }
+
+        .tax {
+            color: #666666;
+            margin-bottom: 3px;
+        }
+
+        .riderDes {
+            color: #575757;
+            font-family: Roboto;
+            font-size: 12px;
+            line-height: 13px;
+        }
+
+        .riderTitle {
+            text-overflow: ellipsis;
+            overflow:hidden; 
+            white-space:nowrap;
+            width: 210px;
+        }
+
+        .middleAlign{
+            height: 42px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<div class="body">
+    <div style="display: -webkit-box;display: inline-flex;">
+        <div class="banner"><img style="height: 120px;" src="https://catalog.mintpro.in/LIFE/share_plan_logo/dhoniLife.png">
+            <div class="banner-content"><b class="font16">Hi {{ customerName }}</b>
+                <p class="light" style="color: #4D5556;margin-bottom: 10px;">
+                {{ lifePremiumRequest.entryAge }} yrs old 
+                {{#ifEquals lifePremiumRequest.gender "M"}}
+                    <span> | male </span>
+                {{/ifEquals}}
+                {{#ifEquals lifePremiumRequest.gender "F"}}
+                    <span> | female </span>
+                {{/ifEquals}}
+                {{ lifePremiumRequest.incomeBracketCode }}
+                </p>
+                <p>This term life insurance plan provides protection against untimely death, ensuring the financial stability of your dependants in your absence.</p>
+            </div>
+        </div>
+        <div style="text-align:right;">
+            <img style="padding:16px 0 10px 20px; width: 100px;" src="https://www.turtlemint.com/wp-content/themes/turtlemint/tm-assets/img/logo.png">
+            {{#if partnerDetails.partnerName}}
+                <div style="padding-right: 15px;">
+                    <p class="font14 bold" style="text-transform:capitalize;">{{partnerDetails.partnerName}}</p>
+                    <b>{{partnerDetails.partnerMobile}}</b>
+                    <p class="medfont">Insurance Advisor</p>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+    <div class="branding">
+        <div style="display: -webkit-box;display: inline-flex;width: 470px;text-overflow: ellipsis;overflow:hidden; white-space:nowrap;">
+            <img style="width: 60px;height:35px" src="https://custom-static.turtlemint.com/images/{{lifePremiumResponse.companyDetails.logo}}" alt="">
+            <div style="margin-left: 10px;">
+                <p class="font14" style="padding-left: 15px;">{{ lifePremiumResponse.productName }}
+                    {{#if lifePremiumResponse.option}} <b> - {{lifePremiumResponse.option }}</b>{{/if}}
+                </p>
+                <p style="margin-top: 3px;">
+                    <span class="light chip">Trusted Brand | {{lifePremiumResponse.companyDetails.lifeCompanyDetails.claimSettlementRatio}} claimed settled</span>
+                </p>
+            </div>
+        </div>
+        <div style="width: 80px;text-align: right;">
+            <b class="font14 bold">{{lifePremiumResponse.policyTerm}} Year</b>
+            <p class="light" style="margin-top: 3px;">Policy Term</p>
+        </div>
+    </div>
+    <div class="premium">
+        <div class="box"><b class="font14">What you pay</b>
+            <div class="amount">
+                <p class="tax">Premium Including Tax</p>
+                <b class="primary font14">&#x20B9; {{premiumWithTax}} / {{paymentFrequency}}</b>
+            </div>
+            <div class="amount">
+                <p class="tax">Total Investment over {{lifePremiumRequest.policyTerm}} years</p>
+                <b class="primary font14">&#x20B9; {{premiumWithTax}} </b>
+            </div>
+        </div>
+        <div class="box" style="border-left: 1px solid #D8D8D8;"><b class="font14">What you Get</b>
+            <div class="amount">
+                <p class="tax">On Death</p>
+                <b class="primary font14">&#x20B9; {{ sumAssured }}</b>
+            </div>
+            <div class="amount">
+                <p class="tax">On Maturity after {{lifePremiumRequest.policyTerm}} years</p>
+                <b class="primary font14">&#x20B9; {{lifePremiumResponse.survivalBenefitGuaranteed}}</b>
+            </div>
+        </div>
+    </div>
+    <div class="container buyNow">
+        <p class="title">Why you should Buy Now</p>
+        <div class="just-content">
+            <div class="eqSection"><img src="https://catalog.mintpro.in/LIFE/share_plan_logo/winner.svg">
+                <p><b>Enjoy a gauranteed lifelong income </b> so you can relax through your retired life.</p>
+            </div>
+            <div class="eqSection"><img src="https://catalog.mintpro.in/LIFE/share_plan_logo/kite_fly.svg">
+                <p><b>The younger you buy the lesser premium </b> you will have to pay for better coverage.</p>
+            </div>
+            <div class="eqSection"><img src="https://catalog.mintpro.in/LIFE/share_plan_logo/piggy_bank.svg">
+                <p><b>Save taxes</b> under section 80C by paying Insurance premiums.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {{#if keyFeatures.length}}
+        <p class="title">Key Features of this Plan</p>
+        <div class="just-content">
+            <ul class="double" style="margin-left: -50px;">
+                {{#each keyFeatures}}
+                <li class="feature"><img src="https://catalog.mintpro.in/LIFE/share_plan_logo/thumpsup.svg" alt="">
+                    <div>
+                        <div class="middleAlign">
+                            <p >{{this.title}}</p>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/if}}
+    </div>
+    {{#if lifePremiumResponse.riderList}}
+    <div class="container riders">
+        <p class="title">Selected Riders</p>
+        <div class="just-content">
+            {{#ifLessThan lifePremiumResponse.riderList.length 3}}
+                <ul class="double">
+                    {{#each lifePremiumResponse.riderList}}
+                        <li style="height: 60px;">
+                            <div class="rider-data">
+                                <div class="riderTitle">
+                                    <b>{{this.riderName}} </b>
+                                </div>
+                                {{#if this.riderPremium}}
+                                    <div style="width: 50px;text-align: right;">
+                                        <b class="primary">₹ {{this.riderPremium}}</b>
+                                    </div>
+                                {{/if}}
+                            </div>
+                            <p class="riderDes">{{this.riderDesc}}</p>
+                        </li>
+                    {{/each}}
+                </ul>
+            {{/ifLessThan}}
+            {{#ifGreaterThan lifePremiumResponse.riderList.length 2}}
+                <ul class="double">
+                    {{#each lifePremiumResponse.riderList}}
+                    <li style="height: 20px;">
+                        <div class="rider-data">
+                            <div class="riderTitle">
+                                <b>{{this.riderName}} </b>
+                            </div>
+                            {{#if this.riderPremium}}
+                                <div style="width: 60px;text-align: right;">
+                                    <b class="primary">₹ {{this.riderPremium}}</b>
+                                </div>
+                            {{/if}}
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            {{/ifGreaterThan}}
+        </div>
+    </div>
+    {{/if}}
+    <div class="footer">
+        <div class="flex" style="width: 280px;"><img style="width: 77px;padding-right: 2px;" src="https://catalog.mintpro.in/LIFE/share_plan_logo/expert.svg" alt="">
+            <div>
+                <p class="title primary">Call Experts - 1800 266 0101</p>
+                <p class="font10">Call our insurance experts on if you have any question about this plan or need any claims related support.</p>
+            </div>
+        </div>
+        <div class="flex" style="width: 295px;margin-left: 10px;">
+            <div style="text-align: right;">
+                <p class="title primary">
+                    Download Turtlemint App 
+                </p>
+                <p class="font10" style="margin-top: 8px;">Find all policies | Track claims | Win rewards </p>
+                <a style="text-decoration:none;" target="_blank" href="https://play.google.com/store/apps/details?id=com.turtlemintconsumerapp&referrer=utm_source%3Dtm_life%26utm_medium%3Dquotes_page">
+                    <img style="height: 35px;" src="https://catalog.mintpro.in/LIFE/share_plan_logo/googlePlay.svg"  alt="">
+                </a>
+            </div><img style="width: 75px;padding-left: 2px;margin-right: -10px;" src="https://catalog.mintpro.in/LIFE/share_plan_logo/mobile.svg" alt="">
+        </div>
+    </div>
+</div>
