@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+    var options = {
+        type: 'doughnut',
+        data: {
+        labels: [
+            'Red',
+            'Blue',
+            'Yellow'
+        ],
+        datasets: [{
+            label: 'My First Dataset',
+            data: [300, 50, 100],
+            backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+            ],
+            hoverOffset: 4
+        }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Chart.js Doughnut Chart'
+                }
+            },
+            animation: {
+                duration: 0
+            },
+            elements: {
+                arc: {
+                    borderWidth : 0
+                }
+            },
+            cutoutPercentage : 80
+        },
+    }
+
+    var ctx = document.getElementById('chartJSContainer').getContext('2d');
+    new Chart(ctx, options);
+}
+</script>
+</head>
+<body>
+    <canvas id="chartJSContainer" width="600" height="400"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+
+<ul class="questionlist"><!-- {{#each questionlist}} -->
+    <li class="question">
+        <div class="f12 weight4" style="line-height: 20px;">
+            {{this.question}}
+        </div>
+        <div class="f14 weight7 top2">
+            <span class="answer">{{this.answer}}</span>
+        </div>
+    </li>
+<!-- {{/each}}--></ul> 
+</body>
+</html>

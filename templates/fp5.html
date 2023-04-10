@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <title>Turtlemint</title>
+    <script>
+        window.onload = function () {
+            var expense = document.getElementById('expense').innerText;
+            var saving = document.getElementById('saving').innerText;
+            var options = {
+                type: 'doughnut',
+                data: {
+                datasets: [{
+                    data: [saving, expense],
+                    backgroundColor: [
+                        '#00A465',
+                        '#FFD200'
+                    ],
+                    hoverOffset: 4
+                }]
+                },
+                options: {
+                    responsive: true,
+                    legend: {
+                            display : false,
+                            labels: {
+                                usePointStyle: true,
+                                maxWidth: 6
+                            },
+                            position: "bottom"
+                        },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Chart.js Doughnut Chart'
+                        }
+                    },
+                    animation: {
+                        duration: 0
+                    },
+                    elements: {
+                        arc: {
+                            borderWidth : 0
+                        }
+                    },
+                    cutoutPercentage : 70
+                },
+            };
+            var ctx = document.getElementById('chartJSContainer').getContext('2d');
+            new Chart(ctx, options);
+
+
+            function getAllCharts(id, gap){
+                var opt = {
+                    zoomEnabled: true,
+                    type: 'doughnut',
+                    data: {
+                    datasets: [{
+                        data: [100 - gap, gap],
+                        backgroundColor: [
+                            '#62CB4F',
+                            '#E47E6A',
+                        ],
+                        hoverOffset: 4
+                    }]
+                    },
+                    options: {
+                        responsive: true,
+                        legend: {
+                                display : false,
+                                labels: {
+                                    usePointStyle: true,
+                                    maxWidth: 6
+                                },
+                                position: "bottom"
+                            },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Chart.js Doughnut Chart'
+                            }
+                        },
+                        animation: {
+                            duration: 0
+                        },
+                        elements: {
+                            arc: {
+                                borderWidth : 0
+                            }
+                        },
+                        cutoutPercentage : 65
+                    },
+                };
+                
+                var ctx3 = document.getElementById(id).getContext('2d');
+                new Chart(ctx3, opt);
+            };
+
+            var modules = ["MGSDG4Z5K3P", "MGSJCKFUO02", "MGSA67WEGOW", "MGVCVQT569S", "MGSJCI6HA80", "MGVKLOF5C74", "MGVKLOOR6YP", "MGVKLOZ80LE"]
+
+            for(i=0; i<modules.length; i++){
+                if(document.getElementById(modules[i]+"-gap")){
+                    const gap = document.getElementById(modules[i]+"-gap").innerText;
+                    getAllCharts(modules[i], parseFloat(gap));
+                }
+            }
+
+        }
+    </script>
+    <style>
+        body{
+            margin: 0px;
+            font-family: Roboto;
+        }
+        .new-page{
+            position: relative;
+            height: 842px;
+        }
+        .powered{
+            position: absolute;
+            z-index: +99;
+            text-align: left;
+            right: 24px;
+            top: 16px;
+            font-size: 10px;
+        }
+        .white{
+            color: #ffffff;
+        }
+        .grey{
+            color: #585858;
+        }
+        .grey2{
+            color: #696969;
+        }
+        .grey3{
+            color: #505050;
+        }
+        .pri{
+            color: #3CAF4E;
+        }
+        .err{
+            color: #E73931;
+        }
+        .textCenter{
+            text-align: center;
+        }
+        .inline{
+            display: -webkit-box;
+        }
+        .weight8{
+            font-weight: 800;
+        }
+        .weight7{
+            font-weight: 700;
+        }
+        .weight6{
+            font-weight: 600;
+        }
+        .weight5{
+            font-weight: 500;
+        }
+        .weight4{
+            font-weight: 400;
+        }
+        .weight3{
+            font-weight: 300;
+        }
+        .f8{
+            font-size: 8px;
+        }
+        .f10{
+            font-size: 10px;
+        }
+        .f12{
+            font-size: 12px;
+        }
+        .f14{
+            font-size: 14px;
+        }
+        .f15{
+            font-size: 15px;
+        }
+        .f16{
+            font-size: 16px;
+        }
+        .f18{
+            font-size: 18px;
+        }
+        .f20{
+            font-size: 20px;
+        }
+        .f22{
+            font-size: 22px;
+            line-height: 22px;
+        }
+        .f24{
+            font-size: 24px;
+            line-height: 24px;
+        }
+        .pad6{
+            padding: 6px;
+        }
+        .padL8{
+            padding-left: 8px;
+        }
+        .padR8{
+            padding-right: 8px;
+        }
+        .mar8{
+            margin: 24px 16px;
+        }
+        .top2{
+            margin-top: 2px;
+        }
+        .top4{
+            margin-top: 4px;
+        }
+        .top5{
+            margin-top: 5px;
+        }
+        .top8{
+            margin-top: 8px;
+        }
+        .top16{
+            margin-top: 16px;
+        }
+        .top18{
+            margin-top: 18px;
+        }
+        .top20{
+            margin-top: 20px;
+        }
+        .top30{
+            margin-top: 30px;
+        }
+        .width85{
+            width: 85px;
+            max-width: 85px;
+        }
+        .dipFlex{
+            display: -webkit-box;
+            display: flex;
+        }
+        .name{
+            width: 50%;
+            text-align: right;
+        }
+        .number{
+            width: 50%;
+        }
+        .banner {
+            background-color: #3caf4e;
+            text-align: center;
+            height: 470px;
+            overflow: hidden;
+            position: relative;
+        }
+        .leaf1 {
+            width: 175vw;
+            height: 175vw;
+            border-radius: 0 0% 0 100%;
+            -webkit-transform: rotate(135deg);
+            -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
+            position: absolute;
+            background: #fff;
+            z-index: +9999999;
+            top: 250px;
+            left: -53px;
+        }
+        .leaf2 {
+            width: 140vw;
+            height: 140vw;
+            border-radius: 0 100% 0 100%;
+            -webkit-transform: rotate(-46deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            position: absolute;
+            background: #00A465;
+            box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.11);
+            top: 160px;
+            left: 23px;
+        }
+        .grad-back {
+            left: 0px;
+            width: 100%;
+            height: 420px;
+            background: radial-gradient(circle, rgb(255, 230, 80) 0%, #3caf4e, #3caf4e);
+            text-align: center;
+            position: absolute;
+            top: 0px;
+            padding-top: 50px;
+        }
+        .report-title{
+            font-family: Roboto;
+            font-size: 27px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0px;
+            text-align: center;
+            line-height: 36px;
+            border-bottom: 2px solid #3CAF4E;
+            width: fit-content;
+            margin: 0px auto;
+        }
+        .header{
+            background: linear-gradient(94.04deg, #FFEBB0 42.68%, #DCFFD5 98.32%);
+            border-radius: 0px;
+        }
+        .headTitle{
+            background: linear-gradient(93.06deg, #FFDF82 -25.16%, #FFF9E7 92.73%);
+            border-radius: 0px 0px 120px 0px;
+            width: 65%;
+            line-height: 64px;
+            padding: 0px 24px;
+            color: #525252;
+            font-weight: 500;
+        }
+
+        #pie{
+            width: 180px;
+            aspect-ratio: 1;
+            position: relative;
+            display: inline-grid;
+            place-content: center;
+            margin: 5px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        #pie:before {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            inset: 0;
+            background-image: conic-gradient( #D12200 calc(25*1%), #d1220036 100%,#0000 30%);
+            mask: radial-gradient(farthest-side,#0000 calc(99% - 20px),#000 calc(100% - 20px));
+            -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - 20px),#000 calc(100% - 20px));
+        }
+
+        #pie:after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            inset: 0;
+            background-image: conic-gradient(#ADE101,#00D17D, #00D17D calc(25*1%),#0000 0);
+            mask: radial-gradient(farthest-side,#0000 calc(99% - 20px),#000 calc(100% - 20px));
+            -webkit-mask: radial-gradient(farthest-side,#0000 calc(99% - 20px),#000 calc(100% - 20px));
+        }
+        
+        .pie-head-text{
+            text-align : center;
+            margin : 0px;
+            font-size : 22px;
+            font-weight : 700;
+            color: #000000;
+        }
+        .pie-sub-text{
+            text-align : center;
+            margin : 0px;
+            font-size : 16px;
+            font-weight : 400;
+            color: #000000;
+        }
+
+        .just-allign{
+            display: -webkit-box;
+            display: flex;
+            justify-content: space-around;
+            -webkit-justify-content: space-around;
+            max-width: 100%;
+        }
+        .just-allign img{
+            width : 45px;
+            height: 45px;
+        }
+        .space-content {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: space-between;
+            justify-content: space-between;
+        }
+        .family-member{
+            background: #EBF5E8;
+            border: 1px solid #F5F5F5;
+            border-radius: 11px;
+            display: -webkit-box;
+            padding: 10px 20px;
+        }
+        .family-member img{
+            height: 45px;
+            width: 45px;
+            margin-left: -21px;
+            margin-bottom: -4px;
+        }
+        .family-income{
+            margin-top: 20px;
+        }
+        .family-income img{
+            height: 45px;
+            width: 45px;
+        }
+        .saving-wrapper{
+            background: linear-gradient(86.75deg, #54B44C 2.28%, #FFFCF4 99.55%);
+            padding: 1px;
+            border-radius: 12px;
+            width: 260px;
+        }
+        .saving-ratio{
+            background: linear-gradient(86.75deg, #E3FFD6 2.28%, #FFFCF4 99.55%);
+            border-radius: 12px;
+            padding: 11px 13px;
+        }
+        
+        .footer {
+            background: linear-gradient(90deg, #ffffff 14.33%, #fbe19b 100%);
+            /* background: linear-gradient(94.04deg,  #DCFFD5 98.32%, #FFEBB0 42.68%); */
+            display: -webkit-box;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            position: absolute;
+            top: 773px;
+            width: 100%;
+        }
+        .flex {
+            display: -webkit-box;
+            display: flex
+        }
+        .title {
+            margin: 7px 0px;
+            margin-top: 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .primary {
+            color: #009F69;
+        }
+        .middleAlign {
+            height: 42px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        .dash{
+            height: 2px;
+            background: #009F69;
+            width: 12px;
+            margin-top: 12px;
+            margin-bottom: 2px;
+            border-radius: 2px;
+        }
+        .bottomYellowShade{
+            padding-left: 12px;
+            background: #ffd255;
+            border-top-left-radius: 61px;
+            height: 68px;
+        }
+        
+        .bottomGreenShade{
+            /* background: #009f69; */
+            background: linear-gradient(120deg, #009f69, #6bb83d 100%, #6bb83d 100%);
+            border-top-left-radius: 61px;
+            text-align: right;
+            height: 100%;
+            color: #ffffff;
+            padding: 0px 30px 0px 48px;
+        }
+
+        .feature {
+            display: -webkit-box;
+            display: flex;
+            align-items: center;
+            padding: 3px 0px;
+            /* position: relative; */
+        }
+
+        .feature-obs {
+            display: -webkit-box;
+            display: flex;
+        }
+
+        .feature-dp {
+            display: -webkit-box;
+            display: flex;
+            font-weight: 400;
+        }
+
+        .feature p {
+            padding-left: 7px;
+            width: 215px;
+            font-family: Roboto;
+            font-size: 12px;
+            line-height: 14px;
+            margin: 3px 0px;
+        }
+
+        .feature img {
+            height: 14px;
+            width: 14px;
+            margin-left: 20px;
+        }
+
+        .feature-obs img {
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .feature-dp img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            margin-top: 2px;
+        }
+
+        .feature .close{
+            background: #ffe4e3;
+            border-radius: 7px;
+        }
+
+        .feature .check{
+            background: #d9f5eb;
+            border-radius: 7px;
+        }
+
+        ul {
+            width: 100%;
+            margin-bottom: 5px;
+            margin-left: -40px;
+            margin-top: 0px;
+        }
+
+        li {
+            float: left;
+            display: inline;
+        }
+        .double{
+            margin-top: 2px;
+        }
+
+        .double li {
+            width: 49%;
+        }
+
+        .double li:nth-child(even) {
+            margin-left: 2%;
+        }
+
+        .tripple li {
+            width: 160px;
+        }
+
+        .obs-type{
+            width: 100px;
+        }
+
+        .obs-dp-type{
+            max-width: 90px;
+            text-align: start;
+            padding-left: 10px;
+        }
+
+        .goal{
+            display: -webkit-box;
+            display: flex;
+            align-items: center;
+            padding: 3px 0px;
+            position: relative;
+            border: 1px solid #D6D6D6;
+        }
+
+        .goallist li {
+            width: 220px;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 15px;
+        }
+
+        .goallist li:nth-child(even) {
+            margin-left: 20px;
+        }
+
+        .question{
+            padding: 3px 0px;
+        }
+
+        .answer {
+            background: #EBF5E8;
+            border-radius: 4px;
+            padding: 4px 8px;
+            width: 100px;
+        }
+
+        .questionlist li {
+            width: 242px;
+            padding: 10px;
+            margin-top: 3px;
+        }
+
+        .progress{
+            width: 24px;
+            height: 9px;
+            border-radius: 5px;
+            margin: 8px 0px;
+            margin-left: 3px;
+            background: #D1D1D1;
+        }
+        .high{
+            background: #3DAA35;
+        }
+        .moderate{
+            background: #FFD200
+        }
+        .low{
+            background: #E73931;
+        }
+
+        .obs li{
+            display: list-item;
+            margin-top: 8px;
+        }
+
+        #Page-6{
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .banner2{
+            background: radial-gradient(circle, #6eb83a 0%, #00A465 65%);
+            height: 515px;
+            z-index: +1;
+            position: relative;
+        }
+
+        .header-wrap{
+            background: linear-gradient(90deg, #009F69 0%, #e9f5f0 83%);
+            border-radius: 100px;
+            margin: 20px 35px;
+            padding: 1.5px;
+        }
+
+        .goal-header{
+            background: #EBF5E8;
+            border-radius: 100px;
+            position: relative;
+            min-height: 80px;
+        }
+
+        .goal-logo{
+            height: 60px;
+            width: 60px;
+            padding: 10px;
+        }
+
+        .logo-wrap {
+            margin: 0px;
+            height: 100%;
+            /* width: 80px; */
+            border: 2px solid #009F69;
+            border-radius: 50%;
+            background: #FFF3EB;
+            position: absolute;
+            right: 0px;
+            top: -2px;
+        }
+
+        .disclaimer {
+            position: absolute;
+            bottom: 75px;
+            width: 485px;
+            margin: 0px 55px 0px 55px;
+        }
+
+        .analysis{
+            margin: 15px 42px;
+            padding: 20px;
+            border: 1px solid #0DA761;
+            border-radius: 12px;
+        }
+
+        .solution{
+            background: linear-gradient(302.82deg, #00A465 -2.73%, #6DB83C 94.21%);
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin: -32px 30px 0px 30px;
+            position: relative;
+        }
+
+        .solution img{
+            width: 27px;
+            height: 27px;
+            padding: 8px;
+            background: #fff;
+            border-radius: 50%;
+            margin-right: 15px;
+            margin-top: 6px;
+        }
+        
+        .consult{
+            padding: 12px 16px;
+            background: #fff;
+            border-radius: 8px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .goal-selection{
+            background: linear-gradient(90deg, #FF9803 2.16%, #FFD256 107.76%);
+            border-radius: 100px;
+            position: absolute;   
+            color: #fff;
+            top: -9.5px;
+            right: 16px;
+            letter-spacing: 1.1px;
+            line-height: 19px;
+            padding: 0px 8px;
+        }
+
+        .ques{
+            padding-bottom: 3px;line-height: 12px;
+        }
+
+        .borderd{
+            border: 1.5px solid #00A465;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div id="Page-1" class="new-page">
+            <div class="banner">
+                <div class="leaf1"></div>
+                <div class="powered weight4" style="color:#fff;top: 24px;font-size: 11px;">
+                    <div>
+                        powered by
+                    </div>
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/tm-white-logo.png" alt="" style="width: 130px;">
+                </div>
+            </div>
+            <div class="grad-back">
+                <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/family.png" style="width: 390px;"/>
+            </div>
+            <div class="" style="width: 285px;margin: 0px auto;margin-top: -6px;">
+                <h2 class="report-title pri">Financial Health Report</h2>
+            </div>
+            <div class="grey textCenter f22 top20 weight7" style="margin-bottom: 3px;">
+                Hi {{customerDetails.name}}!
+            </div>
+            <div class="grey textCenter f16">
+                Thank you for planning your family’s financial future with us.
+            </div>
+            <div class="weight7 textCenter f18 top30">
+                Benefits of Financial Planning
+            </div>
+            <div class="just-allign">
+                <div class="mar8 f12 weight6 textCenter width85">
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/Checkbox.png" />
+                    <div>
+                        Achieve Goals in Time
+                    </div>
+                </div>
+                <div class="mar8 f12 weight6 textCenter width85">
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/Attention.png" />
+                    <div>
+                        Prepare for Emergencies
+                    </div>
+                </div>
+                <div class="mar8 f12 weight6 textCenter width85">
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/Dollar.png" style="width: 65px;height: 65px;margin: -10px;"/>
+                    <div>
+                        Increase Tax Savings 
+                    </div>
+                </div>
+                <div class="mar8 f12 weight6 textCenter width85">
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/Settings.png" style="width: 65px;height: 65px;margin: -10px;"/>
+                    <div>
+                        Optimize your Resources
+                    </div>
+                </div>
+                <div class="mar8 f12 weight6 textCenter width85">
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/Location.png" />
+                    <div>
+                        Improved Living Standard
+                    </div>
+                </div>
+            </div>
+            <div class="textCenter grey f12 weight4">
+                Created by
+            </div>
+            <div class="weight6 pri f16 dipFlex" style="margin-bottom: 16px;">
+                <div class="padR8 name" style="border-right: 1px solid #C4C4C4; margin-right: 8px;margin-left: -8px;">
+                    {{dpDetails.name}}
+                </div>
+                <div class="f15 number">
+                    {{dpDetails.mobile}}
+                </div>
+            </div>
+            <div class="textCenter grey f8 pad6">
+                Disclaimer: The above is prepared for internal consumption only and is used for assisting the potential and interested customers only on a need-to-know basis. All prospects to note that the same is being shared post discussion with our Company and/or our Authorised Sales Person (BQP/POSP) and purely shared on your request based on the data provided by you.
+            </div>
+        </div>
+        <div id="Page-2" class="new-page">
+            <div id="expense" style="display:none;">{{customerDetails.monthlyExpense}}</div>
+            <div id="saving"  style="display: none;">{{customerDetails.monthlySavings}}</div>
+            <div class="header">
+               <div class="headTitle f18">
+                    Financial Health Report
+               </div>
+               <div class="powered weight4" style="color:#7B7B7B;">
+                    <div>
+                        powered by
+                    </div>
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/tm-green-logo.png" alt="" style="width: 100px;">
+                </div>
+            </div>
+            <div style="margin: -12px 40px 0px 40px;">
+                <div style="display: -webkit-box;">
+                    <div style="width: 180px;">
+                        {{#ifEquals customerDetails.gender 'M'}}
+                        <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/male.png" alt="" style="width: 180px;">
+                        {{/ifEquals}} 
+                        {{#ifEquals customerDetails.gender 'F'}}
+                        <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/female.png" alt="" style="width: 180px;">
+                        {{/ifEquals}} 
+                    </div>
+                    <div style="width: 300px;margin: 32px;">
+                        <div class="f18 weight6">Hi {{customerDetails.name}},</div>
+                        <div class="f12 top18">We appreciate you doing your financial planning with us. Thank you for trusting us with your personal details. </div>
+                        <hr style="margin: 18px 0px;"/>
+                        <div class="f12">Below are some details you had shared with us</div>
+                        <table>
+                            <tr>
+                                <td style="width: 150px;">
+                                    <div class="f12 weight4 grey2 top16">Name</div>
+                                    <div class="f16 weight5 top2">{{customerDetails.name}}</div>
+                                </td>
+                                <td>
+                                    <div class="f12 weight4 grey2 top16">Date of Birth</div>
+                                    <div class="f16 weight5 top2">{{customerDetails.dob}}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="f12 weight4 grey2 top16">Phone no.</div>
+                                    <div class="f16 weight5 top2">{{customerDetails.mobile}}</div>
+                                </td>
+                                <td>
+                                    <div class="f12 weight4 grey2 top16">Life Stage</div>
+                                    <div class="f16 weight5 top2">{{customerDetails.lifeStage}}</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="family-member f12 weight6">
+                    <div style="width:150px;margin-top: 6px;">
+                        <div> Family Members - {{length customerDetails.members}} </div>
+                        <div class="weight4" style="line-height: 16px;">{{customerDetails.dependents}} dependants </div>
+                    </div>
+                    <div>
+                        {{#matchSubStrInArr "Self" customerDetails.members}}
+                            {{#ifEquals customerDetails.gender "M"}}
+                                <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/husband.png" alt="">
+                            {{/ifEquals}}
+                            {{#ifEquals customerDetails.gender "F"}}
+                                <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/wife.png" alt="">
+                            {{/ifEquals}}
+                        {{/matchSubStrInArr}}
+                        {{#matchSubStrInArr "Wife" customerDetails.members}}
+                            <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/wife.png" alt="">
+                        {{/matchSubStrInArr}}
+                        {{#matchSubStrInArr "Husband" customerDetails.members}}
+                            <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/husband.png" alt="">
+                        {{/matchSubStrInArr}}
+                        {{#matchSubStrInArr "Daughter" customerDetails.members}}
+                            <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/daughter.png" alt="">
+                        {{/matchSubStrInArr}}
+                        {{#matchSubStrInArr "Son" customerDetails.members}}
+                            <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/son.png" alt="">
+                        {{/matchSubStrInArr}}
+                        {{#matchSubStrInArr "Father" customerDetails.members}}
+                            <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/gfather.png" alt="">
+                        {{/matchSubStrInArr}}
+                        {{#matchSubStrInArr "Mother" customerDetails.members}}
+                            <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/gmother.png" alt="">
+                        {{/matchSubStrInArr}}
+                    </div>
+                    <div style="margin-left: 20px;width: 150px;" class="top8">{{customerDetails.memberList}}</div>
+                </div>
+                <div class="family-income">
+                    <div class="f18 weight6">Monthly Family Cash Flow Details</div>
+                    <div class="weight4 top2 grey f14">As per details of {{customerDetails.createdDate}}</div>
+                
+                    <div class="inline">
+                        <div style="margin-top: 16px;">
+                            <div class="inline" style="margin-left:20px;">
+                                <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/income.png" alt="">
+                                <div class="top5" style="margin-left: 10px;">
+                                    <div class="f12 weight4 grey">Monthly Income</div>
+                                    <div class="f16 weight5 top2">₹ {{formatNumber customerDetails.monthlyIncome "en-IN"}}</div>
+                                </div>
+                            </div>
+                            <div class="inline" style="margin: 16px 0px 0px 20px;">
+                                <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/expense.png" alt="">
+                                <div class="top5" style="margin-left: 10px;">
+                                    <div class="f12 weight4 grey">Monthly Expenses</div>
+                                    <div class="f16 weight5 top2">₹ {{formatNumber customerDetails.monthlyExpense "en-IN"}}</div>
+                                </div>
+                            </div>
+                            <div class="inline" style="margin: 16px 0px 0px 20px;">
+                                <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/saving.png" alt="">
+                                <div class="top5" style="margin-left: 10px;">
+                                    <div class="f12 weight4 grey">Monthly Savings</div>
+                                    <div class="f16 weight5 top2">₹ {{formatNumber customerDetails.monthlySavings "en-IN"}}</div>
+                                </div>
+                            </div>
+                            <div class="saving-wrapper">
+                                <div class="saving-ratio">
+                                    <div class="weight5 inline">
+                                        <div style="width: 50%;">
+                                            Savings Ratio
+                                        </div>
+                                        <div style="width: 50%;text-align: right;">{{customerDetails.savingsPercent}}</div>
+                                    </div>
+                                    <div class="f12 weight4 grey2">
+                                        Ideal savings ratio of a person in your life stage is {{customerDetails.expensePercent}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="position: relative;">
+                            <div style="width: 170px;padding: 45px 0px 20px 40px;">
+                                <canvas id="chartJSContainer" width="300" height="300"></canvas>
+                            </div>
+                            <div style="padding-left: 50px;">
+                                <div class="inline" >
+                                    <div style="width: 10px; height: 10px; background-color: #FFD200;border-radius: 50%; margin: 3px 7px;"></div>
+                                    <div class="f12 weight4">
+                                        <div class="grey2">Expenses</div> 
+                                        <div class="weight5">{{customerDetails.expensePercent}}</div>
+                                    </div>
+                                    <div style="width: 10px; height: 10px; background-color: #00A465; margin: 3px 7px; margin-left: 10px;border-radius: 50%;"></div>
+                                    <div class="f12 weight4">
+                                        <div class="grey2">Saving</div>
+                                        <div class="weight5">{{customerDetails.savingsPercent}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weight5" style="position: absolute;top:110px;left:65px;width: 120px;text-align: center;">
+                                <div class="f20"><b class="weight7 f18">₹</b> {{formatNumber customerDetails.monthlyIncome  "en-IN"}}</div>
+                                <div  class="grey2 f18">Income</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grey f8 pad6 padL8" style="margin-top: 5px;">
+                    Disclaimer: The illustrations and calculations are for demonstration purposes only based on inputs provided by you.
+                </div>
+            </div>
+            <div class="footer">
+                <div class="flex" style="width: 220px;height: 68px;">
+                    <img style="width: 80px; margin-top: -5px;" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/dplogo.png" alt="">
+                    <div class="middleAlign" style="width: 120px;padding-bottom: 20px">
+                        <p class="title primary weight8">{{dpDetails.name}}</p>
+                    </div>
+                </div>
+                <div class="flex" style="width: 180px;height: 68px;">
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">Best Advice Guarantee</div>
+                    </div>
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">24x7 Support</div>
+                    </div>
+                </div>
+                <div class="bottomYellowShade" style="width:200px">
+                    <div class="bottomGreenShade">
+                        <p class="title" style="margin: 0px;padding-top: 10px;">Contact for Details</p>
+                        <div class="f12">{{dpDetails.mobile}}</div>
+                        <div class="f12" style="margin-left: -38px;">{{dpDetails.email}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Page-3" class="new-page">
+            <div class="header">
+               <div class="headTitle f18">
+                    Financial Health Report
+               </div>
+               <div class="powered weight4" style="color:#7B7B7B;">
+                    <div>
+                        powered by
+                    </div>
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/tm-green-logo.png" alt="" style="width: 100px;">
+                </div>
+            </div>
+            <div style="margin:20px 32px 0px 32px;">
+                <div class="f20 weight5">
+                    Financial Readiness Check
+                </div>
+                <div class="f12 weight4 grey2 top5" style="width: 420px;">
+                    The primary objective of this was to assess your current financial status and your financial preparedness to face various challenging life situations.
+                </div>
+                <div style="display: inline-block">
+                    {{#ifGreaterThan riskProfile.frcScore 0}}
+                        <div class="f12 weight5 grey2 top16">
+                            You are <span class="primary ">Well Prepared </span> for
+                        </div>
+                    {{/ifGreaterThan}}
+                    <ul class="double" style="margin-left: -50px;">
+                        {{#if riskProfile.questions.q1}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Securing Family’s future</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q2}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Major illness coverage</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q3}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Physical disability</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q4}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Hospitalization of a family member</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q5}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Children's higher education</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q6}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Income in your retired life</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q7}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Repayment of loans & liabilities</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q8}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Loss of Job/Income</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q9}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Mortgage payment</p>
+                            </div>
+                        </li>{{/if}}
+                        {{#if riskProfile.questions.q10}}<li class="feature">
+                            <img class="check" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/check.png" alt="">
+                            <div class="">
+                                <p>Guidance from Financial expert</p>
+                            </div>
+                        </li>{{/if}}
+                    </ul>
+                </div>
+                <div style="display: inline-block">
+                    {{#ifLessThan riskProfile.frcScore 10}}
+                    <div class="f12 weight5 grey2 top8">
+                        You <span class="err">Need to Prepare </span> for
+                    </div>
+                    {{/ifLessThan}}
+                    <ul class="double" style="margin-left: -50px;">
+                        {{#ifEquals riskProfile.questions.q1 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Securing Family’s future</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q2 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Major illness coverage</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q3 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Physical disability</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q4 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Hospitalization of a family member</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q5 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Children's higher education</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q6 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Income in your retired life</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q7 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Repayment of loans & liabilities</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q8 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Loss of Job/Income</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q9 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Mortgage payment</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                        {{#ifEquals riskProfile.questions.q10 false}}<li class="feature">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/close.png" alt="">
+                            <div class="">
+                                <p>Guidance from Financial expert</p>
+                            </div>
+                        </li>{{/ifEquals}}
+                    </ul>
+                </div>
+                <div class="top18 inline" style="padding-bottom: 15px;border-bottom: 1px solid #E6E6E6">
+                    <div style="width: 270px;margin-right: 10px;">
+                        <div class="f12 weight5 inline">
+                            <div class="grey2" style="width: 50%;">
+                                Your score is :
+                            </div>
+                            <div class="f16" style="width: 50%;text-align: right;">{{riskProfile.frcScore}}/10</div>
+                        </div>
+                        <div class="inline">
+                            {{#ifEquals riskProfile.frcOutput 'high'}}
+                                {{#each riskProfile.questions}}
+                                    {{#if this}}<div class="progress high"></div>{{/if}}
+                                {{/each}}
+                            {{/ifEquals}}
+                            {{#ifEquals riskProfile.frcOutput 'moderate'}}
+                                {{#each riskProfile.questions}}
+                                    {{#if this}}<div class="progress moderate"></div>{{/if}}
+                                {{/each}}
+                            {{/ifEquals}}
+                            {{#ifEquals riskProfile.frcOutput 'very low'}}
+                                {{#each riskProfile.questions}}
+                                    {{#if this}}<div class="progress low"></div>{{/if}}
+                                {{/each}}
+                            {{/ifEquals}}
+                            {{#each riskProfile.questions}}
+                                {{#ifEquals this false}}<div class="progress"></div>{{/ifEquals}}
+                            {{/each}}
+                        </div>
+                        <div class="f20 weight5" style="margin: 8px 0px 10px 0px;">
+                            {{#ifEquals riskProfile.frcOutput 'high'}}Good{{/ifEquals}}
+                            {{#ifEquals riskProfile.frcOutput 'moderate'}}Moderate{{/ifEquals}}
+                            {{#ifEquals riskProfile.frcOutput 'very low'}}Very Low{{/ifEquals}}
+                        </div>
+                        <div class="f12 weight3" style="margin-right: 25px;">
+                            {{#ifEquals riskProfile.frcOutput 'high'}}
+                                Your financial concerns are managed well. However, you may need expert advice to fulfil other financial dreams. 
+                            {{/ifEquals}}
+                            {{#ifEquals riskProfile.frcOutput 'moderate'}}
+                                While you seem to be mostly prepared for emergencies, we feel you can still do more for your and your family's financial growth!
+                            {{/ifEquals}}
+                            {{#ifEquals riskProfile.frcOutput 'very low'}}
+                                You don’t seem to be financially ready for your future! It’s time to plan better to avoid  financial burden on you and your loved ones.
+                            {{/ifEquals}}
+                        </div>
+                    </div>
+                    <div style="width : 240px;">
+                        <img  src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/{{riskProfile.frcOutput}}.png" alt="" style="width : 240px;">
+                    </div>
+                </div>
+                <div class="f16 weight5 top16">
+                    Observations
+                </div>
+                <div style="margin-left: 10px;">
+                    <ul class="tripple" style="margin-left: -50px;">
+                        <li class="feature-obs">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/emergency.png" alt="">
+                            <div class="obs-type">
+                                <div class="f12 weight5">Emergency Fund Level</div>
+                                <div class="inline">
+                                    {{#ifEquals riskProfile.emergencyFundLevel 'High'}}
+                                    <div class="progress high"></div><div class="progress high"></div><div class="progress high"></div>
+                                    {{/ifEquals}}
+                                    {{#ifEquals riskProfile.emergencyFundLevel 'Moderate'}}
+                                    <div class="progress moderate"></div><div class="progress moderate"></div><div class="progress"></div>
+                                    {{/ifEquals}}
+                                    {{#ifEquals riskProfile.emergencyFundLevel 'Low'}}
+                                    <div class="progress low"></div><div class="progress"></div><div class="progress"></div>
+                                    {{/ifEquals}}
+                                </div>
+                                <div class="f16 weight7">{{riskProfile.emergencyFundLevel}}</div>
+                            </div>
+                        </li>
+                        <li class="feature-obs" style="margin-left: 20px;">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/insurance.png" alt="">
+                            <div class="obs-type">
+                                <div class="f12 weight5">Insurance Fund Level</div>
+                                <div class="inline">
+                                    {{#ifEquals riskProfile.insuranceFundLevel 'High'}}
+                                    <div class="progress high"></div><div class="progress high"></div><div class="progress high"></div>
+                                    {{/ifEquals}}
+                                    {{#ifEquals riskProfile.insuranceFundLevel 'Moderate'}}
+                                    <div class="progress moderate"></div><div class="progress moderate"></div><div class="progress"></div>
+                                    {{/ifEquals}}
+                                    {{#ifEquals riskProfile.insuranceFundLevel 'Low'}}
+                                    <div class="progress low"></div><div class="progress"></div><div class="progress"></div>
+                                    {{/ifEquals}}
+                                </div>
+                                <div class="f16 weight7">{{riskProfile.insuranceFundLevel}}</div>
+                            </div>
+                        </li>
+                        <li class="feature-obs" style="margin-left: 20px;">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/futureneed.png" alt="">
+                            <div class="obs-type">
+                                <div class="f12 weight5">Future Needs Fund Level</div>
+                                <div class="inline">
+                                    {{#ifEquals riskProfile.futureNeedsFundLevel 'High'}}
+                                    <div class="progress high"></div><div class="progress high"></div><div class="progress high"></div>
+                                    {{/ifEquals}}
+                                    {{#ifEquals riskProfile.futureNeedsFundLevel 'Moderate'}}
+                                    <div class="progress moderate"></div><div class="progress moderate"></div><div class="progress"></div>
+                                    {{/ifEquals}}
+                                    {{#ifEquals riskProfile.futureNeedsFundLevel 'Low'}}
+                                    <div class="progress low"></div><div class="progress"></div><div class="progress"></div>
+                                    {{/ifEquals}}
+                                </div>
+                                <div class="f16 weight7">{{riskProfile.futureNeedsFundLevel}}</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-left: 17px;">
+                    <ul class="obs f12 weight4 grey2">
+                        <li style="margin-top: 16px;">
+                            Emergencies come with no hints. An emergency fund can be created of at least money amounting to at least a salary of 6 months
+                        </li>
+                        <li>
+                            Having adequate insurance gives you peace of mind and provides you financial security along with tax savings, wealth creation and investment avenues. 
+                        </li>
+                        <li>
+                            Prioritizing your investments and expenditures can help you with having a better life in the future. It is important to understand how much money is being saved and how to save it better.
+                        </li>
+                    </ul>
+                </div>
+                <div class="grey f8 pad6 disclaimer">
+                    Disclaimer: The illustrations and calculations are for demonstration purposes only based on inputs provided by you.
+                </div>
+            </div>
+            <div class="footer">
+                <div class="flex" style="width: 220px;height: 68px;">
+                    <img style="width: 80px; margin-top: -5px;" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/dplogo.png" alt="">
+                    <div class="middleAlign" style="width: 120px;padding-bottom: 20px">
+                        <p class="title primary weight8">{{dpDetails.name}}</p>
+                    </div>
+                </div>
+                <div class="flex" style="width: 180px;height: 68px;">
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">Best Advice Guarantee</div>
+                    </div>
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">24x7 Support</div>
+                    </div>
+                </div>
+                <div class="bottomYellowShade" style="width:200px">
+                    <div class="bottomGreenShade">
+                        <p class="title" style="margin: 0px;padding-top: 10px;">Contact for Details</p>
+                        <div class="f12">{{dpDetails.mobile}}</div>
+                        <div class="f12" style="margin-left: -38px;">{{dpDetails.email}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Page-4" class="new-page">
+            <div class="header">
+               <div class="headTitle f18">
+                    Financial Health Report
+               </div>
+               <div class="powered weight4" style="color:#7B7B7B;">
+                    <div>
+                        powered by
+                    </div>
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/tm-green-logo.png" alt="" style="width: 100px;">
+                </div>
+            </div>
+            <div>
+                <div class="roadmap"  style="position: relative;">
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/roadmap.png" alt="" style="width: 100%;">
+                    <div style="position: absolute;top: 25px; left: 32px; width: 240px;">
+                        <div class="weight5 f20">
+                            Life’s Financial Goals
+                        </div>
+                        <div class="f12 weight4 top8">
+                            We all have many aspirations & goals to achieve. Prioritising, planning and focused action help us achieve them
+                        </div>
+                    </div>
+                    <div style="margin: -70px 36px 0px 36px;">
+                        <div class="f14 weight5">
+                            Plan for achieving any of following goals
+                        </div>
+                        <ul class="goallist">
+                            {{#each goalDetails}}
+                                
+                                    <li class="goal {{#if this.selected}}borderd{{else if this.planned}}borderd{{/if}}">
+                                        <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/{{this.data.iconName}}.svg" width="32px" height="32px" alt="">
+                                        <div style="width: 182px; padding-left: 12px;">
+                                            <div class="f12 weight5" style="line-height: 20px;">
+                                                {{this.name}}
+                                            </div>
+                                            <div class="f10 weight4 top2 grey2" style="line-height: 14px;">
+                                                {{this.data.description}}
+                                            </div>
+                                        </div>
+                                        {{#if this.selected}}<div class="goal-selection f10 weight7">PLANNING PENDING</div>{{/if}}
+                                        {{#if this.planned}}<div class="goal-selection f10 weight7">PLANNING DONE</div>{{/if}}
+                                    </li>
+                                
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="flex" style="width: 220px;height: 68px;">
+                    <img style="width: 80px; margin-top: -5px;" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/dplogo.png" alt="">
+                    <div class="middleAlign" style="width: 120px;padding-bottom: 20px">
+                        <p class="title primary weight8">{{dpDetails.name}}</p>
+                    </div>
+                </div>
+                <div class="flex" style="width: 180px;height: 68px;">
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">Best Advice Guarantee</div>
+                    </div>
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">24x7 Support</div>
+                    </div>
+                </div>
+                <div class="bottomYellowShade" style="width:200px">
+                    <div class="bottomGreenShade">
+                        <p class="title" style="margin: 0px;padding-top: 10px;">Contact for Details</p>
+                        <div class="f12">{{dpDetails.mobile}}</div>
+                        <div class="f12" style="margin-left: -38px;">{{dpDetails.email}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#each gapDetails.data}}
+        <div id="Page-5" class="new-page">
+            <div id="{{this.goalId}}-gap" style="display:none;">{{this.output.gapPercentage}}</div>
+
+            <div class="header">
+               <div class="headTitle f18">
+                    Financial Health Report
+               </div>
+               <div class="powered weight4" style="color:#7B7B7B;">
+                    <div>
+                        powered by
+                    </div>
+                    <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/tm-green-logo.png" alt="" style="width: 100px;">
+                </div>
+            </div>
+            <div>
+                <div style="margin: 20px 35px;" class="header-wrap">
+                    <div class="goal-header">
+                        <div class="space-content">
+                            <div style="width: 325px;margin-left: 28px;padding: 12px;">
+                                <div class="f20 weight5">{{this.goalName}}</div>
+                                <div class="f12 weight4 top2" style="line-height: 15px;">{{this.description}}</div>
+                            </div>
+                            <div style="width:200px;text-align: right;">
+                                <div class="logo-wrap">
+                                    <img class="goal-logo" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/{{this.iconName}}.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin:0px 35px; display: inline-block;">
+                    <div class="f16 weight5">
+                        Below are the details shared by you
+                    </div>
+                    <ul class="questionlist">
+                        <!-- SECURE FAMILY GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGSDG4Z5K3P'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You wish to retire in </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.secureFamilyRetirementAge}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Percentage of my expenses you wish to secure till you retire </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.percentageHouseholdExpensesToBeSecuredTillRetirement}} %</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -4px;">
+                            <div class="f12 weight4 grey3 ques"> Percentage of my expenses you wish to secure after you retire </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.percentageHouseholdExpensesSecuredPostRetirement}} %</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -2px;">
+                            <div class="f12 weight4 grey3 ques"> After retirement you wish to secure my family needs for </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.yearsPostRetirementSOL}} Years</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -4px;">
+                            <div class="f12 weight4 grey3 ques"> You have taken a loan of  </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.currentOutstandingLiabilities "en-IN"}}</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -4px;">
+                            <div class="f12 weight4 grey3 ques"> You have a life insurance cover of </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.currentInsuranceCover "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                        <!-- RETIREMENT GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGSJCKFUO02'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You wish to retire in  </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.retirementAge}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Percentage of expenses you wish to secure after you retire </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.percentageOfHouseholdExpensesSecuredPostRetirement}} %</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -8px;">
+                            <div class="f12 weight4 grey3 ques"> After retirement you wish to secure your family needs for </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.yearsPostRetirementToSecureFamilySOL}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you have already saved for post retirement life is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.retirementExistingAmountOfSavings "en-IN"}}</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -16px;">
+                            <div class="f12 weight4 grey3 ques"> Amount you are saving per month for post retirement life is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.retirementRegularMonthlySavings "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                        <!-- CHILD EDUCATION GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGSA67WEGOW'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Your child’s Birth Date is  </div>
+                            <div class="f14 weight7 top5"><span class="answer">{{formatDate this.childDob "DD-MMM-YYYY"}} </span></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Today your Child’s higher education costs </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.amountRequiredTodayForGoal "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Your child will start higher education in </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.yearsForAmount}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you have already saved for child’s education is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.existingSavings "en-IN"}}</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -8px;">
+                            <div class="f12 weight4 grey3 ques"> Amount you are saving per month for child’s education is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.childRegularMonthlySavings "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                        <!-- CHILD MARRIAGE GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGVCVQT569S'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Your child’s Birth Date is </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{formatDate this.childDob "DD-MMM-YYYY"}} </div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Today your child’s marriage cost is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.marriageAmountRequiredTodayForGoal "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You wish to get your child married in </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.marriageYearsForAmount}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you have already saved for your child’s marriage is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.marriageExistingSavings "en-IN"}}</div></div>
+                        </li>
+                        <li class="question" style="margin-top: -8px;">
+                            <div class="f12 weight4 grey3 ques"> Amount you are saving per month for your child’s marriage is</div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.marriageRegularMonthlySavings "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                        <!-- WEALTH CREATION GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGSJCI6HA80'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You would like to create wealth of </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.amountRequiredTodayToFulfilTheGoal "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You wish to create this wealth in </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.noOfYearsAfterWhichTheAmountIsRequired}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you have already saved for wealth creation is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.wealthExistingAmountOfSavings "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you are saving per month for wealth creation is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.wealthRegularMonthlySavings "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                        <!-- DREAM HOUSE GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGVKLOOR6YP'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Today your dream house costs </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.houseAmountRequiredTodayToFulfilTheGoal "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You wish to move into your dream house in  </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.houseNoOfYearsAfterWhichTheAmountIsRequired}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you have already saved for dream house is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.houseExistingAmountOfSavings "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you are saving per month for dream house is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.houseRegularMonthlySavings "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                        <!-- DREAM CAR GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGVKLOF5C74'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Today your dream car costs </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.carAmountRequiredTodayToFulfilTheGoal "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You wish to buy your dream car in  </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.carNoOfYearsAfterWhichTheAmountIsRequired}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you have already saved for your dream car is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.carExistingAmountOfSavings "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you are saving per month for dream car is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.carRegularMonthlySavings "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                        <!-- TRAVEL ABROAD GOAL QUESTION START -->
+                        {{#ifEquals this.goalId 'MGVKLOZ80LE'}}
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Today your dream vacation costs </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.travelAmountRequiredTodayToFulfilTheGoal "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> You wish to go for this vacation after  </div>
+                            <div class="f14 weight7 top5"><div class="answer">{{this.travelNoOfYearsAfterWhichTheAmountIsRequired}} Years</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you have already saved for your dream vacation is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.travelExistingAmountOfSavings "en-IN"}}</div></div>
+                        </li>
+                        <li class="question">
+                            <div class="f12 weight4 grey3 ques"> Amount you are saving per month for your dream vacation is </div>
+                            <div class="f14 weight7 top5"><div class="answer">₹ {{formatNumber this.travelRegularMonthlySavings "en-IN"}}</div></div>
+                        </li>
+                        {{/ifEquals}}
+                    </ul> 
+                </div>
+                <div>
+                    <div class="analysis">
+                        <div class="inline">
+                            <div class="f16 weight5">Goal Analysis </div>
+                            <div class="f12 weight4" style="line-height: 20px;margin-left: 20px;">
+                                {{#ifEquals this.goalId 'MGSDG4Z5K3P'}}
+                                    To secure your family’s financial future in your absence
+                                {{/ifEquals}}
+
+                                {{#ifEquals this.goalId 'MGSJCKFUO02'}}
+                                    To enjoy your retired life after age of {{this.retirementAge}} years
+                                {{/ifEquals}}
+
+                                {{#ifEquals this.goalId 'MGSA67WEGOW'}} 
+                                    To fulfill your child’s higher education needs in {{this.yearsForAmount}} years
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVCVQT569S'}}
+                                    Enjoy your child’s wedding in {{this.marriageYearsForAmount}} years
+                                {{/ifEquals}}
+
+                                {{#ifEquals this.goalId 'MGSJCI6HA80'}}
+                                    To build desired wealth corpus in {{this.noOfYearsAfterWhichTheAmountIsRequired}} years 
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVKLOF5C74'}}
+                                    To buy your dream car in {{this.carNoOfYearsAfterWhichTheAmountIsRequired}} years 
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVKLOOR6YP'}}
+                                    To buy your dream house in {{this.houseNoOfYearsAfterWhichTheAmountIsRequired}} years
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVKLOZ80LE'}}
+                                    To enjoy  dream destinations around the world in {{this.travelNoOfYearsAfterWhichTheAmountIsRequired}} years
+                                {{/ifEquals}}
+                            </div>
+                        </div>
+                        <div class="inline" style="margin: 15px 33px 0px 33px;">
+                            <div class="top20">
+                                <div class="f12 weight4 grey">You will require</div>
+                                
+                                {{#ifEquals this.goalId 'MGSDG4Z5K3P'}}
+                                    <div class="f14 weight7 top4">₹ {{formatNumber this.output.insuranceCoverNeeded "en-IN"}}</div>
+                                {{/ifEquals}}
+                                {{#ifNotEquals this.goalId 'MGSDG4Z5K3P'}}
+                                    {{#ifEquals this.goalId 'MGSJCKFUO02'}}
+                                        <div class="f14 weight7 top4">₹ {{formatNumber this.output.pvOfCashFlowPostRetirement "en-IN"}}</div>
+                                    {{/ifEquals}}
+                                    {{#ifNotEquals this.goalId 'MGSJCKFUO02'}}
+                                        <div class="f14 weight7 top4">₹ {{formatNumber this.output.inflationAdjustedAmount "en-IN"}}</div>
+                                    {{/ifNotEquals}}
+                                {{/ifNotEquals}}
+                                <div class="f12 weight4 grey top16">You will have </div>
+                                {{#ifEquals this.goalId 'MGSDG4Z5K3P'}}
+                                    <div class="f14 weight7 top4">₹ {{formatNumber this.output.currentInsuranceCover "en-IN"}}</div>
+                                {{/ifEquals}}
+                                {{#ifNotEquals this.goalId 'MGSDG4Z5K3P'}}
+                                <div class="f14 weight7 top4">₹ {{formatNumber this.output.fvOfSavings "en-IN"}}</div>
+                                {{/ifNotEquals}}
+                                
+                            </div>
+                            <div style="position: relative;">
+                                <div>
+                                    <canvas id="{{this.goalId}}" width="230" ></canvas>
+                                </div>
+                                <div class="f12" style="position: absolute;top:42px;left:65px;width: 100px;text-align: center;">
+                                    <div class="weight4 grey2">Gap Of </div>
+                                    <div  class="weight7">{{this.output.gapPercentage}}%</div>
+                                </div>
+                            </div>
+                            <div class="top20">
+                                {{#ifEquals this.goalId 'MGSDG4Z5K3P'}}
+                                    <div class="f12 weight4 grey" style="width: 100px; margin-top: 30px;">Get Life Insurance Cover of</div>
+                                    <div class="f14 weight7 top4">₹ {{formatNumber this.output.gapInInsuranceCover "en-IN"}}</div>
+                                {{/ifEquals}}
+                                {{#ifNotEquals this.goalId 'MGSDG4Z5K3P'}}
+                                    <div class="f12 weight4 grey">To Generate</div>
+                                    <div class="f14 weight7 top4">₹ {{formatNumber this.output.gapInSumAssured "en-IN"}}</div>
+                                    <div class="f12 weight4 grey top16">Start investing</div>
+                                    <div class="f14 weight7 top4">₹ {{formatNumber this.output.monthlySavingsRequired "en-IN"}}<span class="weight4">/month</span></div>
+                                {{/ifNotEquals}}
+                            </div>
+                        </div>
+                        <div class="top20">
+                            {{#ifEquals this.goalId 'MGSDG4Z5K3P'}}Protection Solution{{/ifEquals}}
+                            {{#ifNotEquals this.goalId 'MGSDG4Z5K3P'}}Investment Solution{{/ifNotEquals}}
+                        </div>
+                    </div>
+                    <div class="inline solution">
+                        <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/{{iconName}}.svg" alt="">
+                        <div class="white" style="margin-top: 6px;">
+                            <div class="f14 weight4">Start making regular investments in </div>
+                            <div class="f18 weight7">
+                                {{#ifEquals this.goalId 'MGSDG4Z5K3P'}}
+                                    Term Life Insurance Plans
+                                {{/ifEquals}}
+
+                                {{#ifEquals this.goalId 'MGSJCKFUO02'}}
+                                    Retirement Plans
+                                {{/ifEquals}}
+
+                                {{#ifEquals this.goalId 'MGSA67WEGOW'}} 
+                                    Child Investment Plans
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVCVQT569S'}}
+                                    Child Investment Plans
+                                {{/ifEquals}}
+
+                                {{#ifEquals this.goalId 'MGSJCI6HA80'}}
+                                    Investment Plans
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVKLOF5C74'}}
+                                    Investment Plans
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVKLOOR6YP'}}
+                                    Investment Plans
+                                {{/ifEquals}}
+                                {{#ifEquals this.goalId 'MGVKLOZ80LE'}}
+                                    Investment Plans
+                                {{/ifEquals}}
+                            </div>
+                        </div>
+                        <a class="consult" href="tel:{{this.dpDetails.mobile}}" style="text-decoration: none;">
+                            <div class="f10 weight5" style="color: #000;">Next Step</div>
+                            <div class="f14 weight7 primary">
+                                Consult {{this.dpDetails.name}}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grey f8 pad6 disclaimer">
+                Disclaimer: Arrived gap is based on the inputs provided by you and the following assumptions. Inflation: 5% p.a, Investment returns rate: 6% p.a. The illustrations and calculations are for demonstration purposes only.
+            </div>
+            <div class="footer">
+                <div class="flex" style="width: 220px;height: 68px;">
+                    <img style="width: 80px; margin-top: -5px;" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/dplogo.png" alt="">
+                    <div class="middleAlign" style="width: 120px;padding-bottom: 20px">
+                        <p class="title primary weight8">{{this.dpDetails.name}}</p>
+                    </div>
+                </div>
+                <div class="flex" style="width: 180px;height: 68px;">
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">Best Advice Guarantee</div>
+                    </div>
+                    <div class="middleAlign">
+                        <p class="dash"></p>
+                        <div class="f12 weight4">24x7 Support</div>
+                    </div>
+                </div>
+                <div class="bottomYellowShade" style="width:200px">
+                    <div class="bottomGreenShade">
+                        <p class="title" style="margin: 0px;padding-top: 10px;">Contact for Details</p>
+                        <div class="f12">{{this.dpDetails.mobile}}</div>
+                        <div class="f12" style="margin-left: -38px;">{{this.dpDetails.email}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <div id="Page-6" class="new-page textCenter">
+            <div class="leaf2"></div>
+            <div class="banner2">
+                <div class="white" style="width: 433px; margin: 0px auto;padding-top: 42px;">
+                    <div class="weight7 " style="font-size: 30px;">Thank You {{customerDetails.name}}.</div>
+                    <div class="f18 weight5 " style="padding: 5px 15px;">If you have any doubts or need clarity on anything feel free to connect with me.</div>
+                    <img style="width: 184px;margin: 25px 0px 12px 0px;" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/dpcoverlogo2.png" alt="">
+                    <div class="f24 weight7 ">Mr. {{dpDetails.name}}</div>
+                    <div class="f18 top5">
+                        <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/phone.svg" alt="" style="margin-bottom: -2px;"> {{dpDetails.mobile}}
+                    </div>
+                    <div class="f18 top4" style="padding-bottom: 20px; border-bottom: 1px solid #ffffff;">
+                        <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/envelope.svg" alt="" style="margin-bottom: -5px;"> {{dpDetails.email}}
+                    </div>
+                    <ul class="tripple" style="margin-top: 20px;">
+                        <li class="feature-dp" style="width: 130px;">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/phonebook.svg" alt="">
+                            <div class="obs-dp-type">
+                                <div class="f14">Certified POSP Agent</div>
+                            </div>
+                        </li>
+                        <li class="feature-dp" style="margin-left: 30px;width: 130px;">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/advicetick.svg" alt="">
+                            <div class="obs-dp-type">
+                                <div class="f14">Best Advice Guaranteed</div>
+                            </div>
+                        </li>
+                        <li class="feature-dp" style="margin-left: 30px;width: 110px;">
+                            <img class="close" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/supportstar.svg" alt="">
+                            <div class="obs-dp-type">
+                                <div class="f14">24x7 Call Support</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="weight6 f16 dipFlex" style="margin-bottom: 16px;position: absolute;bottom: 90px;">
+                <div class="padR8" style="border-right: 1px solid #C4C4C4;width: 295px;">
+                    <div class="weight4" style="color:#7B7B7B;text-align: left;padding: 10px 33px 10px 120px;">
+                        <div>
+                            powered by
+                        </div>
+                        <img src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/FP_REPORT/tm-green-logo.png" alt="" style="width: 150px;">
+                    </div>
+                </div>
+                <div class="f14 grey2 weight4" style="width: 172px;margin-left: 23px; text-align: left;padding: 12px 10px;">
+                    Turtlemint Insurance Broking Services Pvt Ltd IRDAI License No. 487
+                </div>
+            </div>
+            <div class="textCenter grey f8 pad6 disclaimer" style="bottom: 40px; width: 375px;left: 60px; ">
+                Disclaimer: Insurance is a subject matter of solicitation. For more details on policy terms, conditions, exclusions, limitations, please refer/read policy brochure before concluding sale.
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+</body>
+</html>
