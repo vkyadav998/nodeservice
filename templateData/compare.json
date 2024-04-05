@@ -1,0 +1,1532 @@
+[
+    {
+        "broker": "turtlemint",
+        "template": "LIFE_PLANS_COMPARE",
+        "templateType": "pdf",
+        "data": {
+            "planComparisonRequest": {
+                "requestId": "AH7RXWNN1TS",
+                "uniqueId": "7b81c02e-2a52-4e63-a53c-13e9de4d3b76",
+                "plans": [
+                    {
+                        "id": "65c608eb403e6b7bb7e2cf6f",
+                        "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                        "key": "P98",
+                        "productCode": "P98",
+                        "optionCode": 2,
+                        "isRecommended": false
+                    },
+                    {
+                        "id": "65c608f2403e6b7bb7e2cf70",
+                        "resultId": "c9a59c6184db1f783bd922b62458540c",
+                        "key": "P91",
+                        "productCode": "P91",
+                        "optionCode": 1,
+                        "isRecommended": false
+                    },
+                    {
+                        "id": "65c608eb403e6b7bb7e2cf6f",
+                        "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                        "key": "P93",
+                        "productCode": "P93",
+                        "optionCode": 3,
+                        "isRecommended": false
+                    }
+                ]
+            },
+            "responsePlans": [
+                {
+                    "id": "65c608eb403e6b7bb7e2cf6f",
+                    "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                    "productCode": "P98",
+                    "optionCode": 2,
+                    "insurerCode": "ICICIPRULI",
+                    "planName": "Guaranteed Pension Plan Flexi",
+                    "optionName": "Single Life without Return of Premium",
+                    "premiumAmount": 100000,
+                    "premiumFrequency": "Yearly",
+                    "isRecommended": false,
+                    "options": [
+                        {
+                            "id": "65c608eb403e6b7bb7e2cf6f",
+                            "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                            "productCode": "P98",
+                            "optionCode": 2,
+                            "insurerCode": "ICICIPRULI",
+                            "planName": "Guaranteed Pension Plan Flexi",
+                            "optionName": "Single Life without Return of Premium",
+                            "premiumAmount": 100000,
+                            "premiumFrequency": "Yearly"
+                        },
+                        {
+                            "id": "65c608eb403e6b7bb7e2cf6f",
+                            "productCode": "P98",
+                            "optionCode": 4,
+                            "insurerCode": "ICICIPRULI",
+                            "planName": "Guaranteed Pension Plan Flexi",
+                            "optionName": "Joint Life without Return of Premium",
+                            "premiumFrequency": "Yearly"
+                        },
+                        {
+                            "id": "65c608eb403e6b7bb7e2cf6f",
+                            "productCode": "P98",
+                            "optionCode": 3,
+                            "insurerCode": "ICICIPRULI",
+                            "planName": "Guaranteed Pension Plan Flexi",
+                            "optionName": "Joint Life with Return of Premium",
+                            "premiumFrequency": "Yearly"
+                        },
+                        {
+                            "id": "65c608eb403e6b7bb7e2cf6f",
+                            "productCode": "P98",
+                            "optionCode": 5,
+                            "insurerCode": "ICICIPRULI",
+                            "planName": "Guaranteed Pension Plan Flexi",
+                            "optionName": "Joint Life with Return of Premium and Waiver of Premium",
+                            "premiumFrequency": "Yearly"
+                        },
+                        {
+                            "id": "65c608eb403e6b7bb7e2cf6f",
+                            "resultId": "83546378ab7459e1313c7526663aec6b",
+                            "productCode": "P98",
+                            "optionCode": 1,
+                            "insurerCode": "ICICIPRULI",
+                            "planName": "Guaranteed Pension Plan Flexi",
+                            "optionName": "Single Life with Return of Premium",
+                            "premiumAmount": 100000,
+                            "premiumFrequency": "Yearly"
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "code": "basicDetails",
+                            "name": "Basic Details",
+                            "sequence": 1,
+                            "attributes": [
+                                {
+                                    "code": "premiumPaymentTerm",
+                                    "name": "Premium Payment Term",
+                                    "description": "The period for which premiums must be paid for the policy",
+                                    "type": "text",
+                                    "value": "8 years"
+                                },
+                                {
+                                    "code": "policyTerm",
+                                    "name": "Policy Term",
+                                    "description": "Total duration of the life insurance coverage",
+                                    "type": "text",
+                                    "value": "48 years"
+                                },
+                                {
+                                    "code": "investmentAmount",
+                                    "name": "Investment Amount",
+                                    "description": "Amount invested in a non-term life insurance policy",
+                                    "type": "currency",
+                                    "value": 100000
+                                },
+                                {
+                                    "code": "incomePeriod",
+                                    "name": "Income Period",
+                                    "description": "The duration for which periodic payments are made to the beneficiary",
+                                    "type": "text",
+                                    "value": "41 years "
+                                },
+                                {
+                                    "code": "income",
+                                    "name": "Income",
+                                    "description": "Regular payout received from the policy",
+                                    "type": "currency",
+                                    "value": 1925075
+                                },
+                                {
+                                    "code": "selectedFundsOrStrategy",
+                                    "name": "Selected Funds/Strategy",
+                                    "description": "The schemes where premiums are allocated in unit-linked plans",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "lifeCover",
+                                    "name": "Life Cover/Death Benefit",
+                                    "description": "The guaranteed amount payable in case of the insured's demise",
+                                    "type": "currency",
+                                    "value": 1000000
+                                },
+                                {
+                                    "code": "coverUptoAge",
+                                    "name": "Cover Upto Age",
+                                    "description": "Maximum age till which the policy provides coverage",
+                                    "type": "text",
+                                    "value": "100 years"
+                                },
+                                {
+                                    "code": "payoutOptions",
+                                    "name": "Payout Options",
+                                    "description": "Various methods available for receiving policy benefits",
+                                    "type": "text",
+                                    "value": [
+                                        "INCOME"
+                                    ]
+                                },
+                                {
+                                    "code": "selectedRider",
+                                    "name": "selectedRider",
+                                    "description": "Optional additional coverage chosen with the life insurance policy",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "insurerDetails",
+                            "name": "Insurer Details",
+                            "sequence": 4,
+                            "attributes": [
+                                {
+                                    "code": "inceptionYear",
+                                    "name": "Inception Year",
+                                    "description": "The year the life insurance company was established",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "claimSettlementRatio",
+                                    "name": "Claim Settlement Ratio",
+                                    "description": "Percentage of death claims settled by the insurer",
+                                    "type": "text",
+                                    "value": "97.8%"
+                                },
+                                {
+                                    "code": "solvencyRatio",
+                                    "name": "Solvency Ratio",
+                                    "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                    "type": "text",
+                                    "value": "217%"
+                                },
+                                {
+                                    "code": "numberOfLivesInsured",
+                                    "name": "Number Of Lives Insured",
+                                    "description": "Count of individuals covered under the policy",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "assetUnderManagement",
+                                    "name": "Asset Under Management",
+                                    "description": "Total value of assets managed by the insurer",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "branchesAcrossIndia",
+                                    "name": "Branches Across India",
+                                    "description": "Number of branches operational nationwide",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "65c608f2403e6b7bb7e2cf70",
+                    "resultId": "c9a59c6184db1f783bd922b62458540c",
+                    "productCode": "P91",
+                    "optionCode": 1,
+                    "insurerCode": "BAJAJLI",
+                    "planName": "Assured Wealth Goal",
+                    "optionName": "Second Income- Income for 25 years",
+                    "premiumAmount": 100000,
+                    "premiumFrequency": "Yearly",
+                    "isRecommended": false,
+                    "options": [
+                        {
+                            "id": "65c608f2403e6b7bb7e2cf70",
+                            "resultId": "c9a59c6184db1f783bd922b62458540c",
+                            "productCode": "P91",
+                            "optionCode": 1,
+                            "insurerCode": "BAJAJLI",
+                            "planName": "Assured Wealth Goal",
+                            "optionName": "Second Income- Income for 25 years",
+                            "premiumAmount": 100000,
+                            "premiumFrequency": "Yearly"
+                        }
+                    ],
+                    "sections": [
+                        {
+                            "code": "basicDetails",
+                            "name": "Basic Details",
+                            "sequence": 1,
+                            "attributes": [
+                                {
+                                    "code": "premiumPaymentTerm",
+                                    "name": "Premium Payment Term",
+                                    "description": "The period for which premiums must be paid for the policy",
+                                    "type": "text",
+                                    "value": "8 years"
+                                },
+                                {
+                                    "code": "policyTerm",
+                                    "name": "Policy Term",
+                                    "description": "Total duration of the life insurance coverage",
+                                    "type": "text",
+                                    "value": "33 years"
+                                },
+                                {
+                                    "code": "investmentAmount",
+                                    "name": "Investment Amount",
+                                    "description": "Amount invested in a non-term life insurance policy",
+                                    "type": "currency",
+                                    "value": 100000
+                                },
+                                {
+                                    "code": "incomePeriod",
+                                    "name": "Income Period",
+                                    "description": "The duration for which periodic payments are made to the beneficiary",
+                                    "type": "text",
+                                    "value": "25 years "
+                                },
+                                {
+                                    "code": "income",
+                                    "name": "Income",
+                                    "description": "Regular payout received from the policy",
+                                    "type": "currency",
+                                    "value": 1637500
+                                },
+                                {
+                                    "code": "selectedFundsOrStrategy",
+                                    "name": "Selected Funds/Strategy",
+                                    "description": "The schemes where premiums are allocated in unit-linked plans",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "lifeCover",
+                                    "name": "Life Cover/Death Benefit",
+                                    "description": "The guaranteed amount payable in case of the insured's demise",
+                                    "type": "currency",
+                                    "value": 1060000
+                                },
+                                {
+                                    "code": "coverUptoAge",
+                                    "name": "Cover Upto Age",
+                                    "description": "Maximum age till which the policy provides coverage",
+                                    "type": "text",
+                                    "value": "85 years"
+                                },
+                                {
+                                    "code": "payoutOptions",
+                                    "name": "Payout Options",
+                                    "description": "Various methods available for receiving policy benefits",
+                                    "type": "text",
+                                    "value": [
+                                        "INCOME"
+                                    ]
+                                },
+                                {
+                                    "code": "selectedRider",
+                                    "name": "selectedRider",
+                                    "description": "Optional additional coverage chosen with the life insurance policy",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "code": "insurerDetails",
+                            "name": "Insurer Details",
+                            "sequence": 4,
+                            "attributes": [
+                                {
+                                    "code": "inceptionYear",
+                                    "name": "Inception Year",
+                                    "description": "The year the life insurance company was established",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "claimSettlementRatio",
+                                    "name": "Claim Settlement Ratio",
+                                    "description": "Percentage of death claims settled by the insurer",
+                                    "type": "text",
+                                    "value": "98.02%"
+                                },
+                                {
+                                    "code": "solvencyRatio",
+                                    "name": "Solvency Ratio",
+                                    "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                    "type": "text",
+                                    "value": "745%"
+                                },
+                                {
+                                    "code": "numberOfLivesInsured",
+                                    "name": "Number Of Lives Insured",
+                                    "description": "Count of individuals covered under the policy",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "assetUnderManagement",
+                                    "name": "Asset Under Management",
+                                    "description": "Total value of assets managed by the insurer",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "branchesAcrossIndia",
+                                    "name": "Branches Across India",
+                                    "description": "Number of branches operational nationwide",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "planSectionRowInfoList": [
+                {
+                    "code": "basicDetails",
+                    "name": "Basic Details",
+                    "sequence": 1,
+                    "features": [
+                        {
+                            "title": {
+                                "code": "premiumPaymentTerm",
+                                "name": "Premium Payment Term",
+                                "description": "The period for which premiums must be paid for the policy"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "premiumPaymentTerm",
+                                    "name": "Premium Payment Term",
+                                    "description": "The period for which premiums must be paid for the policy",
+                                    "type": "text",
+                                    "value": "8 years"
+                                },
+                                {
+                                    "code": "premiumPaymentTerm",
+                                    "name": "Premium Payment Term",
+                                    "description": "The period for which premiums must be paid for the policy",
+                                    "type": "text",
+                                    "value": "8 years"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "policyTerm",
+                                "name": "Policy Term",
+                                "description": "Total duration of the life insurance coverage"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "policyTerm",
+                                    "name": "Policy Term",
+                                    "description": "Total duration of the life insurance coverage",
+                                    "type": "text",
+                                    "value": "48 years"
+                                },
+                                {
+                                    "code": "policyTerm",
+                                    "name": "Policy Term",
+                                    "description": "Total duration of the life insurance coverage",
+                                    "type": "text",
+                                    "value": "33 years"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "investmentAmount",
+                                "name": "Investment Amount",
+                                "description": "Amount invested in a non-term life insurance policy"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "investmentAmount",
+                                    "name": "Investment Amount",
+                                    "description": "Amount invested in a non-term life insurance policy",
+                                    "type": "currency",
+                                    "value": 100000
+                                },
+                                {
+                                    "code": "investmentAmount",
+                                    "name": "Investment Amount",
+                                    "description": "Amount invested in a non-term life insurance policy",
+                                    "type": "currency",
+                                    "value": 100000
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "incomePeriod",
+                                "name": "Income Period",
+                                "description": "The duration for which periodic payments are made to the beneficiary"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "incomePeriod",
+                                    "name": "Income Period",
+                                    "description": "The duration for which periodic payments are made to the beneficiary",
+                                    "type": "text",
+                                    "value": "41 years "
+                                },
+                                {
+                                    "code": "incomePeriod",
+                                    "name": "Income Period",
+                                    "description": "The duration for which periodic payments are made to the beneficiary",
+                                    "type": "text",
+                                    "value": "25 years "
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "income",
+                                "name": "Income",
+                                "description": "Regular payout received from the policy"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "income",
+                                    "name": "Income",
+                                    "description": "Regular payout received from the policy",
+                                    "type": "currency",
+                                    "value": 1925075
+                                },
+                                {
+                                    "code": "income",
+                                    "name": "Income",
+                                    "description": "Regular payout received from the policy",
+                                    "type": "currency",
+                                    "value": 1637500
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "selectedFundsOrStrategy",
+                                "name": "Selected Funds/Strategy",
+                                "description": "The schemes where premiums are allocated in unit-linked plans"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "selectedFundsOrStrategy",
+                                    "name": "Selected Funds/Strategy",
+                                    "description": "The schemes where premiums are allocated in unit-linked plans",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "selectedFundsOrStrategy",
+                                    "name": "Selected Funds/Strategy",
+                                    "description": "The schemes where premiums are allocated in unit-linked plans",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "lifeCover",
+                                "name": "Life Cover/Death Benefit",
+                                "description": "The guaranteed amount payable in case of the insured's demise"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "lifeCover",
+                                    "name": "Life Cover/Death Benefit",
+                                    "description": "The guaranteed amount payable in case of the insured's demise",
+                                    "type": "currency",
+                                    "value": 1000000
+                                },
+                                {
+                                    "code": "lifeCover",
+                                    "name": "Life Cover/Death Benefit",
+                                    "description": "The guaranteed amount payable in case of the insured's demise",
+                                    "type": "currency",
+                                    "value": 1060000
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "coverUptoAge",
+                                "name": "Cover Upto Age",
+                                "description": "Maximum age till which the policy provides coverage"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "coverUptoAge",
+                                    "name": "Cover Upto Age",
+                                    "description": "Maximum age till which the policy provides coverage",
+                                    "type": "text",
+                                    "value": "100 years"
+                                },
+                                {
+                                    "code": "coverUptoAge",
+                                    "name": "Cover Upto Age",
+                                    "description": "Maximum age till which the policy provides coverage",
+                                    "type": "text",
+                                    "value": "85 years"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "payoutOptions",
+                                "name": "Payout Options",
+                                "description": "Various methods available for receiving policy benefits"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "payoutOptions",
+                                    "name": "Payout Options",
+                                    "description": "Various methods available for receiving policy benefits",
+                                    "type": "text",
+                                    "value": [
+                                        "INCOME"
+                                    ]
+                                },
+                                {
+                                    "code": "payoutOptions",
+                                    "name": "Payout Options",
+                                    "description": "Various methods available for receiving policy benefits",
+                                    "type": "text",
+                                    "value": [
+                                        "INCOME"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "selectedRider",
+                                "name": "selectedRider",
+                                "description": "Optional additional coverage chosen with the life insurance policy"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "selectedRider",
+                                    "name": "selectedRider",
+                                    "description": "Optional additional coverage chosen with the life insurance policy",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "selectedRider",
+                                    "name": "selectedRider",
+                                    "description": "Optional additional coverage chosen with the life insurance policy",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "code": "insurerDetails",
+                    "name": "Insurer Details",
+                    "sequence": 4,
+                    "features": [
+                        {
+                            "title": {
+                                "code": "inceptionYear",
+                                "name": "Inception Year",
+                                "description": "The year the life insurance company was established"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "inceptionYear",
+                                    "name": "Inception Year",
+                                    "description": "The year the life insurance company was established",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "inceptionYear",
+                                    "name": "Inception Year",
+                                    "description": "The year the life insurance company was established",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "claimSettlementRatio",
+                                "name": "Claim Settlement Ratio",
+                                "description": "Percentage of death claims settled by the insurer"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "claimSettlementRatio",
+                                    "name": "Claim Settlement Ratio",
+                                    "description": "Percentage of death claims settled by the insurer",
+                                    "type": "text",
+                                    "value": "97.8%"
+                                },
+                                {
+                                    "code": "claimSettlementRatio",
+                                    "name": "Claim Settlement Ratio",
+                                    "description": "Percentage of death claims settled by the insurer",
+                                    "type": "text",
+                                    "value": "98.02%"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "solvencyRatio",
+                                "name": "Solvency Ratio",
+                                "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "solvencyRatio",
+                                    "name": "Solvency Ratio",
+                                    "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                    "type": "text",
+                                    "value": "217%"
+                                },
+                                {
+                                    "code": "solvencyRatio",
+                                    "name": "Solvency Ratio",
+                                    "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                    "type": "text",
+                                    "value": "745%"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "numberOfLivesInsured",
+                                "name": "Number Of Lives Insured",
+                                "description": "Count of individuals covered under the policy"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "numberOfLivesInsured",
+                                    "name": "Number Of Lives Insured",
+                                    "description": "Count of individuals covered under the policy",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "numberOfLivesInsured",
+                                    "name": "Number Of Lives Insured",
+                                    "description": "Count of individuals covered under the policy",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "assetUnderManagement",
+                                "name": "Asset Under Management",
+                                "description": "Total value of assets managed by the insurer"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "assetUnderManagement",
+                                    "name": "Asset Under Management",
+                                    "description": "Total value of assets managed by the insurer",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "assetUnderManagement",
+                                    "name": "Asset Under Management",
+                                    "description": "Total value of assets managed by the insurer",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        {
+                            "title": {
+                                "code": "branchesAcrossIndia",
+                                "name": "Branches Across India",
+                                "description": "Number of branches operational nationwide"
+                            },
+                            "planFeatures": [
+                                {
+                                    "code": "branchesAcrossIndia",
+                                    "name": "Branches Across India",
+                                    "description": "Number of branches operational nationwide",
+                                    "type": "text"
+                                },
+                                {
+                                    "code": "branchesAcrossIndia",
+                                    "name": "Branches Across India",
+                                    "description": "Number of branches operational nationwide",
+                                    "type": "text"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+
+        },
+        "pdfOptions": {
+            "orientation": "Potrait",
+            "format": "A4",
+            "margin": "0",
+            "paginationOffset": "1",
+            "footer": {
+                "height": "0mm",
+                "contents": {
+                    "default": "<table width='100%' bgcolor='' cellspacing='10' style='font-size:10px;font-weight:bold'> <tr style='padding: 12px 22px;background-color: rgba(161, 166, 167, 0.64);'> <td style='color: #fff; font-weight: lighter;padding-left:18px'><img src='https://custom-static.turtlemint.com/images/turtlemint-logo-7df8cb52bc.svg' style='max-width:100px;margin:10px 0'></td> <td align='right' style='color: #6c7375;padding-right:16px;vertical-align: middle !important'><span style='font-weight: 500;font-size: 10px'>Page {{page}} of {{pages}} </span></td> </tr></table>"
+                }
+            },
+            "header": {
+                "height": "0mm"
+            }
+        }
+    }
+]
+2024-03-14T15: 07: 20.814Z [template-generator
+] info: PDFGeneratorService - generate() - templateGeneratorConfig: : [
+    {
+        "S3_BUCKET_NAME": "docs.turtle-feature.com",
+        "hostUrl": "https://pro.infinite.turtle-feature.com",
+        "S3_BUCKET_REGION": "ap-south-1",
+        "IS_ENABLED": true,
+        "hostName": "infinite.turtle-feature.com",
+        "HOST_URL": "https://infinite.turtle-feature.com",
+        "broker": "turtlemint",
+        "tenant": "turtlemint"
+    }
+]
+2024-03-14T15: 07: 20.814Z [template-generator
+] info: TemplateProcessService - trying to render HTML : 2024-03-14T15: 07: 20.815Z [template-generator
+] info: TemplateProcessService - context : [
+    {
+        "planComparisonRequest": {
+            "requestId": "AH7RXWNN1TS",
+            "uniqueId": "7b81c02e-2a52-4e63-a53c-13e9de4d3b76",
+            "plans": [
+                {
+                    "id": "65c608eb403e6b7bb7e2cf6f",
+                    "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                    "key": "P98",
+                    "productCode": "P98",
+                    "optionCode": 2,
+                    "isRecommended": false
+                },
+                {
+                    "id": "65c608f2403e6b7bb7e2cf70",
+                    "resultId": "c9a59c6184db1f783bd922b62458540c",
+                    "key": "P91",
+                    "productCode": "P91",
+                    "optionCode": 1,
+                    "isRecommended": false
+                },
+                {
+                    "id": "65c608eb403e6b7bb7e2cf6f",
+                    "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                    "key": "P93",
+                    "productCode": "P93",
+                    "optionCode": 3,
+                    "isRecommended": false
+                }
+            ]
+        },
+        "responsePlans": [
+            {
+                "id": "65c608eb403e6b7bb7e2cf6f",
+                "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                "productCode": "P98",
+                "optionCode": 2,
+                "insurerCode": "ICICIPRULI",
+                "planName": "Guaranteed Pension Plan Flexi",
+                "optionName": "Single Life without Return of Premium",
+                "premiumAmount": 100000,
+                "premiumFrequency": "Yearly",
+                "isRecommended": false,
+                "options": [
+                    {
+                        "id": "65c608eb403e6b7bb7e2cf6f",
+                        "resultId": "ac841603b5c8a40f5eda9094a139c43c",
+                        "productCode": "P98",
+                        "optionCode": 2,
+                        "insurerCode": "ICICIPRULI",
+                        "planName": "Guaranteed Pension Plan Flexi",
+                        "optionName": "Single Life without Return of Premium",
+                        "premiumAmount": 100000,
+                        "premiumFrequency": "Yearly"
+                    },
+                    {
+                        "id": "65c608eb403e6b7bb7e2cf6f",
+                        "productCode": "P98",
+                        "optionCode": 4,
+                        "insurerCode": "ICICIPRULI",
+                        "planName": "Guaranteed Pension Plan Flexi",
+                        "optionName": "Joint Life without Return of Premium",
+                        "premiumFrequency": "Yearly"
+                    },
+                    {
+                        "id": "65c608eb403e6b7bb7e2cf6f",
+                        "productCode": "P98",
+                        "optionCode": 3,
+                        "insurerCode": "ICICIPRULI",
+                        "planName": "Guaranteed Pension Plan Flexi",
+                        "optionName": "Joint Life with Return of Premium",
+                        "premiumFrequency": "Yearly"
+                    },
+                    {
+                        "id": "65c608eb403e6b7bb7e2cf6f",
+                        "productCode": "P98",
+                        "optionCode": 5,
+                        "insurerCode": "ICICIPRULI",
+                        "planName": "Guaranteed Pension Plan Flexi",
+                        "optionName": "Joint Life with Return of Premium and Waiver of Premium",
+                        "premiumFrequency": "Yearly"
+                    },
+                    {
+                        "id": "65c608eb403e6b7bb7e2cf6f",
+                        "resultId": "83546378ab7459e1313c7526663aec6b",
+                        "productCode": "P98",
+                        "optionCode": 1,
+                        "insurerCode": "ICICIPRULI",
+                        "planName": "Guaranteed Pension Plan Flexi",
+                        "optionName": "Single Life with Return of Premium",
+                        "premiumAmount": 100000,
+                        "premiumFrequency": "Yearly"
+                    }
+                ],
+                "sections": [
+                    {
+                        "code": "basicDetails",
+                        "name": "Basic Details",
+                        "sequence": 1,
+                        "attributes": [
+                            {
+                                "code": "premiumPaymentTerm",
+                                "name": "Premium Payment Term",
+                                "description": "The period for which premiums must be paid for the policy",
+                                "type": "text",
+                                "value": "8 years"
+                            },
+                            {
+                                "code": "policyTerm",
+                                "name": "Policy Term",
+                                "description": "Total duration of the life insurance coverage",
+                                "type": "text",
+                                "value": "48 years"
+                            },
+                            {
+                                "code": "investmentAmount",
+                                "name": "Investment Amount",
+                                "description": "Amount invested in a non-term life insurance policy",
+                                "type": "currency",
+                                "value": 100000
+                            },
+                            {
+                                "code": "incomePeriod",
+                                "name": "Income Period",
+                                "description": "The duration for which periodic payments are made to the beneficiary",
+                                "type": "text",
+                                "value": "41 years "
+                            },
+                            {
+                                "code": "income",
+                                "name": "Income",
+                                "description": "Regular payout received from the policy",
+                                "type": "currency",
+                                "value": 1925075
+                            },
+                            {
+                                "code": "selectedFundsOrStrategy",
+                                "name": "Selected Funds/Strategy",
+                                "description": "The schemes where premiums are allocated in unit-linked plans",
+                                "type": "text"
+                            },
+                            {
+                                "code": "lifeCover",
+                                "name": "Life Cover/Death Benefit",
+                                "description": "The guaranteed amount payable in case of the insured's demise",
+                                "type": "currency",
+                                "value": 1000000
+                            },
+                            {
+                                "code": "coverUptoAge",
+                                "name": "Cover Upto Age",
+                                "description": "Maximum age till which the policy provides coverage",
+                                "type": "text",
+                                "value": "100 years"
+                            },
+                            {
+                                "code": "payoutOptions",
+                                "name": "Payout Options",
+                                "description": "Various methods available for receiving policy benefits",
+                                "type": "text",
+                                "value": [
+                                    "INCOME"
+                                ]
+                            },
+                            {
+                                "code": "selectedRider",
+                                "name": "selectedRider",
+                                "description": "Optional additional coverage chosen with the life insurance policy",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "insurerDetails",
+                        "name": "Insurer Details",
+                        "sequence": 4,
+                        "attributes": [
+                            {
+                                "code": "inceptionYear",
+                                "name": "Inception Year",
+                                "description": "The year the life insurance company was established",
+                                "type": "text"
+                            },
+                            {
+                                "code": "claimSettlementRatio",
+                                "name": "Claim Settlement Ratio",
+                                "description": "Percentage of death claims settled by the insurer",
+                                "type": "text",
+                                "value": "97.8%"
+                            },
+                            {
+                                "code": "solvencyRatio",
+                                "name": "Solvency Ratio",
+                                "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                "type": "text",
+                                "value": "217%"
+                            },
+                            {
+                                "code": "numberOfLivesInsured",
+                                "name": "Number Of Lives Insured",
+                                "description": "Count of individuals covered under the policy",
+                                "type": "text"
+                            },
+                            {
+                                "code": "assetUnderManagement",
+                                "name": "Asset Under Management",
+                                "description": "Total value of assets managed by the insurer",
+                                "type": "text"
+                            },
+                            {
+                                "code": "branchesAcrossIndia",
+                                "name": "Branches Across India",
+                                "description": "Number of branches operational nationwide",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "65c608f2403e6b7bb7e2cf70",
+                "resultId": "c9a59c6184db1f783bd922b62458540c",
+                "productCode": "P91",
+                "optionCode": 1,
+                "insurerCode": "BAJAJLI",
+                "planName": "Assured Wealth Goal",
+                "optionName": "Second Income- Income for 25 years",
+                "premiumAmount": 100000,
+                "premiumFrequency": "Yearly",
+                "isRecommended": false,
+                "options": [
+                    {
+                        "id": "65c608f2403e6b7bb7e2cf70",
+                        "resultId": "c9a59c6184db1f783bd922b62458540c",
+                        "productCode": "P91",
+                        "optionCode": 1,
+                        "insurerCode": "BAJAJLI",
+                        "planName": "Assured Wealth Goal",
+                        "optionName": "Second Income- Income for 25 years",
+                        "premiumAmount": 100000,
+                        "premiumFrequency": "Yearly"
+                    }
+                ],
+                "sections": [
+                    {
+                        "code": "basicDetails",
+                        "name": "Basic Details",
+                        "sequence": 1,
+                        "attributes": [
+                            {
+                                "code": "premiumPaymentTerm",
+                                "name": "Premium Payment Term",
+                                "description": "The period for which premiums must be paid for the policy",
+                                "type": "text",
+                                "value": "8 years"
+                            },
+                            {
+                                "code": "policyTerm",
+                                "name": "Policy Term",
+                                "description": "Total duration of the life insurance coverage",
+                                "type": "text",
+                                "value": "33 years"
+                            },
+                            {
+                                "code": "investmentAmount",
+                                "name": "Investment Amount",
+                                "description": "Amount invested in a non-term life insurance policy",
+                                "type": "currency",
+                                "value": 100000
+                            },
+                            {
+                                "code": "incomePeriod",
+                                "name": "Income Period",
+                                "description": "The duration for which periodic payments are made to the beneficiary",
+                                "type": "text",
+                                "value": "25 years "
+                            },
+                            {
+                                "code": "income",
+                                "name": "Income",
+                                "description": "Regular payout received from the policy",
+                                "type": "currency",
+                                "value": 1637500
+                            },
+                            {
+                                "code": "selectedFundsOrStrategy",
+                                "name": "Selected Funds/Strategy",
+                                "description": "The schemes where premiums are allocated in unit-linked plans",
+                                "type": "text"
+                            },
+                            {
+                                "code": "lifeCover",
+                                "name": "Life Cover/Death Benefit",
+                                "description": "The guaranteed amount payable in case of the insured's demise",
+                                "type": "currency",
+                                "value": 1060000
+                            },
+                            {
+                                "code": "coverUptoAge",
+                                "name": "Cover Upto Age",
+                                "description": "Maximum age till which the policy provides coverage",
+                                "type": "text",
+                                "value": "85 years"
+                            },
+                            {
+                                "code": "payoutOptions",
+                                "name": "Payout Options",
+                                "description": "Various methods available for receiving policy benefits",
+                                "type": "text",
+                                "value": [
+                                    "INCOME"
+                                ]
+                            },
+                            {
+                                "code": "selectedRider",
+                                "name": "selectedRider",
+                                "description": "Optional additional coverage chosen with the life insurance policy",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "code": "insurerDetails",
+                        "name": "Insurer Details",
+                        "sequence": 4,
+                        "attributes": [
+                            {
+                                "code": "inceptionYear",
+                                "name": "Inception Year",
+                                "description": "The year the life insurance company was established",
+                                "type": "text"
+                            },
+                            {
+                                "code": "claimSettlementRatio",
+                                "name": "Claim Settlement Ratio",
+                                "description": "Percentage of death claims settled by the insurer",
+                                "type": "text",
+                                "value": "98.02%"
+                            },
+                            {
+                                "code": "solvencyRatio",
+                                "name": "Solvency Ratio",
+                                "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                "type": "text",
+                                "value": "745%"
+                            },
+                            {
+                                "code": "numberOfLivesInsured",
+                                "name": "Number Of Lives Insured",
+                                "description": "Count of individuals covered under the policy",
+                                "type": "text"
+                            },
+                            {
+                                "code": "assetUnderManagement",
+                                "name": "Asset Under Management",
+                                "description": "Total value of assets managed by the insurer",
+                                "type": "text"
+                            },
+                            {
+                                "code": "branchesAcrossIndia",
+                                "name": "Branches Across India",
+                                "description": "Number of branches operational nationwide",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "planSectionRowInfoList": [
+            {
+                "code": "basicDetails",
+                "name": "Basic Details",
+                "sequence": 1,
+                "features": [
+                    {
+                        "title": {
+                            "code": "premiumPaymentTerm",
+                            "name": "Premium Payment Term",
+                            "description": "The period for which premiums must be paid for the policy"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "premiumPaymentTerm",
+                                "name": "Premium Payment Term",
+                                "description": "The period for which premiums must be paid for the policy",
+                                "type": "text",
+                                "value": "8 years"
+                            },
+                            {
+                                "code": "premiumPaymentTerm",
+                                "name": "Premium Payment Term",
+                                "description": "The period for which premiums must be paid for the policy",
+                                "type": "text",
+                                "value": "8 years"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "policyTerm",
+                            "name": "Policy Term",
+                            "description": "Total duration of the life insurance coverage"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "policyTerm",
+                                "name": "Policy Term",
+                                "description": "Total duration of the life insurance coverage",
+                                "type": "text",
+                                "value": "48 years"
+                            },
+                            {
+                                "code": "policyTerm",
+                                "name": "Policy Term",
+                                "description": "Total duration of the life insurance coverage",
+                                "type": "text",
+                                "value": "33 years"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "investmentAmount",
+                            "name": "Investment Amount",
+                            "description": "Amount invested in a non-term life insurance policy"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "investmentAmount",
+                                "name": "Investment Amount",
+                                "description": "Amount invested in a non-term life insurance policy",
+                                "type": "currency",
+                                "value": 100000
+                            },
+                            {
+                                "code": "investmentAmount",
+                                "name": "Investment Amount",
+                                "description": "Amount invested in a non-term life insurance policy",
+                                "type": "currency",
+                                "value": 100000
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "incomePeriod",
+                            "name": "Income Period",
+                            "description": "The duration for which periodic payments are made to the beneficiary"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "incomePeriod",
+                                "name": "Income Period",
+                                "description": "The duration for which periodic payments are made to the beneficiary",
+                                "type": "text",
+                                "value": "41 years "
+                            },
+                            {
+                                "code": "incomePeriod",
+                                "name": "Income Period",
+                                "description": "The duration for which periodic payments are made to the beneficiary",
+                                "type": "text",
+                                "value": "25 years "
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "income",
+                            "name": "Income",
+                            "description": "Regular payout received from the policy"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "income",
+                                "name": "Income",
+                                "description": "Regular payout received from the policy",
+                                "type": "currency",
+                                "value": 1925075
+                            },
+                            {
+                                "code": "income",
+                                "name": "Income",
+                                "description": "Regular payout received from the policy",
+                                "type": "currency",
+                                "value": 1637500
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "selectedFundsOrStrategy",
+                            "name": "Selected Funds/Strategy",
+                            "description": "The schemes where premiums are allocated in unit-linked plans"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "selectedFundsOrStrategy",
+                                "name": "Selected Funds/Strategy",
+                                "description": "The schemes where premiums are allocated in unit-linked plans",
+                                "type": "text"
+                            },
+                            {
+                                "code": "selectedFundsOrStrategy",
+                                "name": "Selected Funds/Strategy",
+                                "description": "The schemes where premiums are allocated in unit-linked plans",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "lifeCover",
+                            "name": "Life Cover/Death Benefit",
+                            "description": "The guaranteed amount payable in case of the insured's demise"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "lifeCover",
+                                "name": "Life Cover/Death Benefit",
+                                "description": "The guaranteed amount payable in case of the insured's demise",
+                                "type": "currency",
+                                "value": 1000000
+                            },
+                            {
+                                "code": "lifeCover",
+                                "name": "Life Cover/Death Benefit",
+                                "description": "The guaranteed amount payable in case of the insured's demise",
+                                "type": "currency",
+                                "value": 1060000
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "coverUptoAge",
+                            "name": "Cover Upto Age",
+                            "description": "Maximum age till which the policy provides coverage"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "coverUptoAge",
+                                "name": "Cover Upto Age",
+                                "description": "Maximum age till which the policy provides coverage",
+                                "type": "text",
+                                "value": "100 years"
+                            },
+                            {
+                                "code": "coverUptoAge",
+                                "name": "Cover Upto Age",
+                                "description": "Maximum age till which the policy provides coverage",
+                                "type": "text",
+                                "value": "85 years"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "payoutOptions",
+                            "name": "Payout Options",
+                            "description": "Various methods available for receiving policy benefits"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "payoutOptions",
+                                "name": "Payout Options",
+                                "description": "Various methods available for receiving policy benefits",
+                                "type": "text",
+                                "value": [
+                                    "INCOME"
+                                ]
+                            },
+                            {
+                                "code": "payoutOptions",
+                                "name": "Payout Options",
+                                "description": "Various methods available for receiving policy benefits",
+                                "type": "text",
+                                "value": [
+                                    "INCOME"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "selectedRider",
+                            "name": "selectedRider",
+                            "description": "Optional additional coverage chosen with the life insurance policy"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "selectedRider",
+                                "name": "selectedRider",
+                                "description": "Optional additional coverage chosen with the life insurance policy",
+                                "type": "text"
+                            },
+                            {
+                                "code": "selectedRider",
+                                "name": "selectedRider",
+                                "description": "Optional additional coverage chosen with the life insurance policy",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "code": "insurerDetails",
+                "name": "Insurer Details",
+                "sequence": 4,
+                "features": [
+                    {
+                        "title": {
+                            "code": "inceptionYear",
+                            "name": "Inception Year",
+                            "description": "The year the life insurance company was established"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "inceptionYear",
+                                "name": "Inception Year",
+                                "description": "The year the life insurance company was established",
+                                "type": "text"
+                            },
+                            {
+                                "code": "inceptionYear",
+                                "name": "Inception Year",
+                                "description": "The year the life insurance company was established",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "claimSettlementRatio",
+                            "name": "Claim Settlement Ratio",
+                            "description": "Percentage of death claims settled by the insurer"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "claimSettlementRatio",
+                                "name": "Claim Settlement Ratio",
+                                "description": "Percentage of death claims settled by the insurer",
+                                "type": "text",
+                                "value": "97.8%"
+                            },
+                            {
+                                "code": "claimSettlementRatio",
+                                "name": "Claim Settlement Ratio",
+                                "description": "Percentage of death claims settled by the insurer",
+                                "type": "text",
+                                "value": "98.02%"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "solvencyRatio",
+                            "name": "Solvency Ratio",
+                            "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "solvencyRatio",
+                                "name": "Solvency Ratio",
+                                "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                "type": "text",
+                                "value": "217%"
+                            },
+                            {
+                                "code": "solvencyRatio",
+                                "name": "Solvency Ratio",
+                                "description": "Size of its capital against the all risk the insurance company has taken. Indicator of an insurer's ability to meet its obligations",
+                                "type": "text",
+                                "value": "745%"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "numberOfLivesInsured",
+                            "name": "Number Of Lives Insured",
+                            "description": "Count of individuals covered under the policy"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "numberOfLivesInsured",
+                                "name": "Number Of Lives Insured",
+                                "description": "Count of individuals covered under the policy",
+                                "type": "text"
+                            },
+                            {
+                                "code": "numberOfLivesInsured",
+                                "name": "Number Of Lives Insured",
+                                "description": "Count of individuals covered under the policy",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "assetUnderManagement",
+                            "name": "Asset Under Management",
+                            "description": "Total value of assets managed by the insurer"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "assetUnderManagement",
+                                "name": "Asset Under Management",
+                                "description": "Total value of assets managed by the insurer",
+                                "type": "text"
+                            },
+                            {
+                                "code": "assetUnderManagement",
+                                "name": "Asset Under Management",
+                                "description": "Total value of assets managed by the insurer",
+                                "type": "text"
+                            }
+                        ]
+                    },
+                    {
+                        "title": {
+                            "code": "branchesAcrossIndia",
+                            "name": "Branches Across India",
+                            "description": "Number of branches operational nationwide"
+                        },
+                        "planFeatures": [
+                            {
+                                "code": "branchesAcrossIndia",
+                                "name": "Branches Across India",
+                                "description": "Number of branches operational nationwide",
+                                "type": "text"
+                            },
+                            {
+                                "code": "branchesAcrossIndia",
+                                "name": "Branches Across India",
+                                "description": "Number of branches operational nationwide",
+                                "type": "text"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

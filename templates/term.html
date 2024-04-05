@@ -25,12 +25,17 @@
         }
 
         .banner {
-            background-color: #FFD255;
+            /* background-color: #FFD255; */
+            background: linear-gradient(273.12deg, #ffd255 0.36%, #ffdd80 50.36%, #fff4d0 98.61%);
             border-bottom-right-radius: 200px;
             width: 77%;
             height: 116px;
             display: -webkit-box;
             display: inline-flex;
+        }
+        .banner img{
+            padding: 10px;
+            margin-left: 10px;
         }
 
         .light {
@@ -262,7 +267,7 @@
 </head>
 <div class="body">
     <div style="display: -webkit-box;display: inline-flex;">
-        <div class="banner"><img style="height: 120px;" src="https://catalog.mintpro.in/LIFE/share_plan_logo/dhoniLife.png">
+        <div class="banner"><img style="height: 107px;" src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/share_plan_logo/tmBoat.png">
             <div class="banner-content"><b class="font16">Hi {{ customerName }}</b>
                 <p class="light" style="color: #4D5556;margin-bottom: 10px;">{{ lifePremiumRequest.entryAge }} yrs old
                     {{#ifEquals lifePremiumRequest.gender "M"}}<span> male </span> {{/ifEquals}}

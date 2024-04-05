@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <title>Turtlemint</title>
+    <style>
+        body {
+            margin: 0px;
+            font-family: Roboto;
+            height: 100%;
+            background-color: #fff;
+        }
+
+        .new-page {
+            position: relative;
+            /* height: 830px; */
+        }
+
+        .powered {
+            position: absolute;
+            z-index: +99;
+            text-align: left;
+            right: 24px;
+            top: 16px;
+            font-size: 10px;
+        }
+
+        .textCenter {
+            text-align: center;
+        }
+
+        .inline {
+            display: -webkit-box;
+        }
+
+        .weight8 {
+            font-weight: 800;
+        }
+
+        .weight7 {
+            font-weight: 700;
+        }
+
+        .weight6 {
+            font-weight: 600;
+        }
+
+        .weight5 {
+            font-weight: 500;
+        }
+
+        .weight4 {
+            font-weight: 400;
+        }
+
+        .weight3 {
+            font-weight: 300;
+        }
+
+        .f8 {
+            font-size: 8px;
+            line-height: 9.4px;
+        }
+
+        .f10 {
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        .f12 {
+            font-size: 12px;
+        }
+
+        .f14 {
+            font-size: 14px;
+        }
+
+        .f15 {
+            font-size: 15px;
+        }
+
+        .f16 {
+            font-size: 16px;
+        }
+
+        .f18 {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .f20 {
+            font-size: 20px;
+        }
+
+        .f22 {
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        .f24 {
+            font-size: 24px;
+            line-height: 24px;
+        }
+
+        .pad6 {
+            padding: 6px;
+        }
+
+        .padL8 {
+            padding-left: 8px;
+        }
+
+        .padR8 {
+            padding-right: 8px;
+        }
+
+        .mar8 {
+            margin: 24px 16px;
+        }
+
+        .top2 {
+            margin-top: 2px;
+        }
+
+        .top4 {
+            margin-top: 4px;
+        }
+
+        .top5 {
+            margin-top: 5px;
+        }
+
+        .top8 {
+            margin-top: 8px;
+        }
+
+        .top16 {
+            margin-top: 16px;
+        }
+
+        .top18 {
+            margin-top: 18px;
+        }
+
+        .top20 {
+            margin-top: 20px;
+        }
+
+        .top30 {
+            margin-top: 30px;
+        }
+
+        .header {
+            background: linear-gradient(94.04deg, #FFEBB0 42.68%, #DCFFD5 98.32%);
+            border-radius: 0px;
+        }
+
+        .headTitle {
+            background: linear-gradient(93.06deg, #FFDF82 -25.16%, #FFF9E7 92.73%);
+            border-radius: 0px 0px 120px 0px;
+            width: 65%;
+            padding: 13px 24px;
+            color: #525252;
+            font-weight: 500;
+        }
+
+        .headTitle p {
+            margin: 0px;
+        }
+
+        .just-allign {
+            display: -webkit-box;
+            display: flex;
+            justify-content: space-around;
+            -webkit-justify-content: space-around;
+            max-width: 100%;
+        }
+
+        .footer-tm {
+            background: linear-gradient(90deg, #ffffff 14.33%, #fbe19b 100%);
+            /* background: linear-gradient(94.04deg,  #DCFFD5 98.32%, #FFEBB0 42.68%); */
+            display: -webkit-box;
+            display: flex;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .footer {
+            height: 53px;
+            padding-top: 15px;
+        }
+
+        .flex {
+            display: -webkit-box;
+            display: flex
+        }
+
+        .title {
+            font-size: 14px;
+            line-height: 15px;
+            padding: 0px;
+            margin: 0px;
+            font-weight: 600;
+        }
+
+        .primary {
+            color: #009F69;
+        }
+
+        .white {
+            color: #ffffff;
+        }
+
+        .grey {
+            color: #585858;
+        }
+
+        .grey2 {
+            color: #696969;
+        }
+
+        .middleAlign {
+            height: 42px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .bottomYellowShade {
+            padding-left: 12px;
+            background: #ffd255;
+            border-top-left-radius: 61px;
+            height: 48px;
+        }
+
+        .bottomGreenShade {
+            background: linear-gradient(120deg, #009f69, #6bb83d 100%, #6bb83d 100%);
+            border-top-left-radius: 61px;
+            text-align: right;
+            height: 100%;
+            color: #ffffff;
+            padding: 0px 16px 0px 0px;
+        }
+
+        .plan-header {
+            padding: 0px 20px;
+        }
+
+        .plan-logo-wrapper {
+            margin: 12px 0px;
+            padding: 4px;
+            text-align: center;
+        }
+
+        .two-plan {
+            width: 180px;
+        }
+
+        .three-plan {
+            width: 134px;
+        }
+
+        .plan-logo {
+            width: 80px;
+            max-height: 36px;
+            margin: 0px auto;
+        }
+
+        .premium-btn {
+            background-color: #00A465;
+            width: 100px;
+            font-size: 12px;
+            border-radius: 4px;
+            color: #fff;
+            border: 0px;
+            padding: 6px;
+        }
+
+        .section-header {
+            font-size: 12px;
+            font-weight: 500;
+            background-color: #FFF7E5;
+            padding: 8px 24px 8px 16px;
+            margin-bottom: 8px;
+        }
+
+        .section-body {
+            padding: 0px 24px;
+        }
+
+        .attribute {
+            width: 140px;
+        }
+
+        .attribute-two {
+            width: 180px;
+            padding: 0px 2px;
+        }
+
+        .attribute-three {
+            width: 140px;
+        }
+
+        .recomended{
+            background-color: #E5F6F0;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .recomended-head{
+            background-color: #E5F6F0;
+            
+        }
+
+        .recomended-btn{
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        .rec-border{
+            margin-top: 12px;
+            padding: 4px;
+            padding-bottom: 0px; 
+            text-align: center;
+            margin-bottom: -12px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            background: linear-gradient(180deg, #00A465 0%, #d6f8bf 70%, #e4f4d9 100%);
+        }
+
+        .rec-border-content{
+            width: 100%;
+            text-align: center;
+            font-size: 10px;
+            background-color: #fff;
+            color: #00A465;
+            font-weight: 500;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            line-height: 18px;
+            padding: 3px; 
+            margin: -3px;
+        }
+
+        .attr-row {
+            padding: 8px 0px;
+            /* break-inside: avoid !important; */
+        }
+
+        .description {
+            margin-top: 4px;
+            color: #757575;
+        }
+
+        .icons {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            padding: 1px;
+        }
+
+        .dipFlex {
+            display: -webkit-box;
+            display: flex;
+        }
+
+        .leaf2 {
+            width: 140vw;
+            height: 140vw;
+            border-radius: 0 100% 0 100%;
+            -webkit-transform: rotate(-46deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            position: absolute;
+            background: #00A465;
+            box-shadow: 0px 12px 17px rgba(0, 0, 0, 0.11);
+            top: 160px;
+            left: 23px;
+        }
+
+        .banner2 {
+            background: radial-gradient(circle, #6eb83a 0%, #00A465 65%);
+            height: 515px;
+            z-index: +1;
+            position: relative;
+        }
+
+        ul {
+            width: 100%;
+            margin-bottom: 5px;
+            margin-left: -40px;
+            margin-top: 0px;
+        }
+
+        li {
+            float: left;
+            display: inline;
+        }
+
+        .tripple li {
+            width: 160px;
+        }
+
+        .obs-dp-type {
+            max-width: 90px;
+            text-align: start;
+            padding-left: 10px;
+        }
+
+        .feature-dp {
+            display: -webkit-box;
+            display: flex;
+            font-weight: 400;
+        }
+
+        .disclaimer {
+            position: absolute;
+            bottom: 75px;
+            width: 485px;
+            margin: 0px 55px 0px 55px;
+        }
+
+        @media print {
+            .attr-row {
+                /* break-inside: avoid !important; */
+            }
+
+            .page-break {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var INSURER_LOGO_PATH = {
+                AEGONLI: "aegon-life.svg",
+                EDELWISSTOKIOLI: "edelweiss-life.svg",
+                HDFCLI: "hdfc-life.svg",
+                ICICIPRULI: "icici-pru.svg",
+                LICLI: "lic.svg",
+                TATAAIALI: "tata-aig.svg",
+                BAJAJLI: "BAJAJLI.png",
+                BHARATILI: "BHARATILI.svg",
+                BHARTIAXALI: "BHARTIAXALI.svg",
+                MAXLIFELI: "MAXLIFELI.jpg",
+                DHFLLI: "DHFLLI.png",
+                TATALI: "TATALI.svg",
+                FGLI: "FGLI.svg",
+                CHOICELI: "CHOICELI.jpg",
+                PNBMETLI: "PNBMETLI.jpg",
+                PNBMETLIFELI: "PNBMETLI.jpg",
+                METLIFE: "METLIFE.png",
+                OMAN: "OMAN.png",
+                ZURICH: "ZURICH.png",
+                SALAMA: "SALAMA.png",
+                IFLI: "IFLILI.png",
+                ABSLI: "ADITYABIRLAHEALTH.png",
+            }
+
+            // var plan1 = document.getElementById('plan-logo-0');
+            // var plan2 = document.getElementById('plan-logo-1');
+            // var plan3 = document.getElementById('plan-logo-2');
+
+            var planZeroLogo = "https://resources.turtlemint.com/images/" + INSURER_LOGO_PATH[document.getElementById('plan-logo-0')?.src];
+            document.getElementById('plan-logo-0')?.src = planZeroLogo;
+            // if (document.getElementById('plan-logo-0') && document.getElementById('plan-logo-0').src) {
+            // }
+            var planOneLogo = "https://resources.turtlemint.com/images/" + INSURER_LOGO_PATH[document.getElementById('plan-logo-1')?.src];
+            document.getElementById('plan-logo-1')?.src = planOneLogo;
+            // if (document.getElementById('plan-logo-1') && document.getElementById('plan-logo-1').src) {
+            // }
+            var planTwoLogo = "https://resources.turtlemint.com/images/" + INSURER_LOGO_PATH[document.getElementById('plan-logo-2')?.src];
+            document.getElementById('plan-logo-2')?.src = planTwoLogo;
+            // if (document.getElementById('plan-logo-2') && document.getElementById('plan-logo-2').src) {
+            // }
+
+            // var totalHeight = Math.max(
+            //     document.body.scrollHeight, document.body.offsetHeight,
+            //     document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight
+            // );
+
+            // // const topMargin = (totalHeight % 842) > 54?(788-(totalHeight % 842)):700;
+            // const topMargin = (795 - (totalHeight % 842));
+
+            // // document.getElementById('title').innerText = topMargin + "+" + totalHeight % 842;
+            // if (topMargin > -10) {
+            //     // document.getElementById('footer').style.marginTop = topMargin+"px";
+            // }
+        }
+    </script>
+</head>
+<div class="body">
+    <div class="new-page">
+        <div class="header">
+            <div class="headTitle">
+                <p class="f18" id="title">Life Insurance Plan Comparison</p>
+                <p class="f10 weight4">Created for {{customerName}} on - {{createdOn}}</p>
+            </div>
+            <div class="powered weight4" style="color:#7B7B7B;">
+                <div>powered by</div><img src="https://catalog.mintpro.in/LIFE/FP_REPORT/tm-green-logo.png" alt=""
+                    style="width: 100px;">
+            </div>
+        </div>
+        <div>
+            <div class="plan-header just-allign" style="position: relative;">
+                <div class="abc {{#ifEquals planResultInfoList.length 2}}two-plan{{/ifEquals}}{{#ifEquals planResultInfoList.length 3}}three-plan{{/ifEquals}}" style="padding: 4px;text-align: center;"></div>
+                {{#each planResultInfoList}}
+                <div style="padding: 4px;text-align: center;" class="abc {{#ifEquals ../planResultInfoList.length 2}}two-plan{{/ifEquals}}{{#ifEquals ../planResultInfoList.length 3}}three-plan{{/ifEquals}} {{#ifEquals this.isRecommended true}}rec-border{{/ifEquals}}">
+                    {{#if this.isRecommended}}
+                        <div class="rec-border-content">
+                            <img style="background-color: #0ba766;width: 9px;height: 9px;border-radius: 50%;padding: 2px;margin-bottom: -3px;"
+                            src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/compare_plans/check-r.svg"
+                            alt="Yes"> Recommended
+                        </div>
+                    {{/if}}
+                </div>
+                {{/each}}
+            </div>
+            <div class="plan-header just-allign">
+                <div class="plan-logo-wrapper {{#ifEquals planResultInfoList.length 2}}two-plan{{/ifEquals}}{{#ifEquals planResultInfoList.length 3}}three-plan{{/ifEquals}}"></div>
+                {{#each planResultInfoList}}
+                <div class="plan-logo-wrapper {{#ifEquals ../planResultInfoList.length 2}}two-plan{{/ifEquals}}{{#ifEquals ../planResultInfoList.length 3}}three-plan{{/ifEquals}} {{#if this.isRecommended}}recomended-head{{/if}}">
+                    <img class="plan-logo" src="{{this.insurerCode}}" style="width: 72px;height: 30px;"
+                        id="plan-logo-{{@index}}" />
+                    <p class="f14" style="margin-top: 5px;"><b>{{this.planName}} -</b> {{this.optionName}}</p>
+                </div>
+                {{/each}}
+            </div>
+            <div class="plan-header just-allign">
+                <div class="plan-logo-wrapper {{#ifEquals planResultInfoList.length 2}}two-plan{{/ifEquals}}{{#ifEquals planResultInfoList.length 3}}three-plan{{/ifEquals}}"></div>
+                {{#each planResultInfoList}}
+                    <div class="plan-logo-wrapper {{#ifEquals ../planResultInfoList.length 2}}two-plan{{/ifEquals}}{{#ifEquals ../planResultInfoList.length 3}}three-plan{{/ifEquals}}  {{#if this.isRecommended}}recomended-head recomended-btn{{/if}}" style="margin-top: -16px;">
+                        <button class="premium-btn">₹{{formatNumber this.premiumAmount "en-IN"}} / Yr</button>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        {{#each planSectionRowInfoList}}
+        <div>
+            <div class="section-header">
+                {{this.name}}
+            </div>
+            <div class="section-body">
+                {{#each this.features}}
+                <div class="attr-row just-allign  page-break">
+                    <div class="f14 weight5 {{#ifEquals this.planFeatures.length 2}}attribute-two{{/ifEquals}}{{#ifEquals this.planFeatures.length 3}}attribute-three{{/ifEquals}}"">
+                        {{this.title.name}}
+                        <div class="f8 description weight4">
+                            {{this.title.description}}
+                        </div>
+                    </div>
+                    {{#each this.planFeatures}}
+                        <div class="textCenter {{#ifEquals ../planFeatures.length 2}}attribute-two{{/ifEquals}}{{#ifEquals ../planFeatures.length 3}}attribute-three{{/ifEquals}}">
+                            <div class="abc {{#if this.isRecommended}}recomended{{/if}}" style="position: relative;display: block">
+                                {{#ifEquals this.type "numeric"}}
+                                    <p class="f14" style="padding: 6px;">{{formatNumber this.value "en-IN"}}</p>
+                                {{/ifEquals}}
+                                {{#ifEquals this.type "currency"}}
+                                    <p class="f14" style="padding: 6px;">&#x20B9; {{currency this.value "en-IN"}}</p>
+                                {{/ifEquals}}
+                                {{#ifEquals this.type "text"}}
+                                    <p class="f14" style="padding: 6px;">{{this.value}}</p>
+                                {{/ifEquals}}
+                                {{#ifEquals this.type "icon"}}
+                                    {{#ifEquals this.value true}}
+                                        <div style="padding: 6px;">
+                                            <img class="icons" style="background-color: #edf9f4;"
+                                                src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/compare_plans/check.svg"
+                                                alt="Yes">
+                                        </div>
+                                    {{/ifEquals}}
+                                    {{#ifEquals this.value false}}
+                                        <div style="padding: 6px;">
+                                            <img class="icons" style="background-color: #fbf0ef;"
+                                                src="https://s3.ap-south-1.amazonaws.com/catalog.turtle-feature.com/LIFE/compare_plans/close1.svg"
+                                                alt="No" />
+                                        </div>
+                                    {{/ifEquals}}
+                                {{/ifEquals}}
+                                {{#ifEquals this.type "complex"}}
+                                    {{#ifEquals this.value "-"}}-{{/ifEquals}}
+                                    {{#ifEquals this.value "NA"}}NA{{/ifEquals}}
+                                    {{#each this.value}}
+                                        <span class="f14" style="padding: 6px;">{{this.name}} - &#x20B9;{{currency this.value "en-IN"}} </span>
+                                    {{/each}}
+                                {{/ifEquals}}
+
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        {{/each}}
+        <!-- <div class="footer" id="footer">
+            <div class="footer-tm page-break">
+                <div class="flex" style="width: 350px;height: 48px;padding-left: 16px;">{{#ifEquals partnerDetails.gender
+                    "female"}}<img style="width: 52px; margin-top: -5px;"
+                        src="https://catalog.mintpro.in/LIFE/FP_REPORT/dpFemale.png" alt=""> {{/ifEquals}}
+                    {{#ifNotEquals partnerDetails.gender "female"}}<img style="width: 55px; margin-top: -5px;"
+                        src="https://catalog.mintpro.in/LIFE/FP_REPORT/dplogo.png" alt=""> {{/ifNotEquals}}
+                    <div class="middleAlign" style="width: 250px;padding-bottom: 10px">
+                        <p class="f10 weight4" style="margin-bottom: 0px;color:#7B7B7B;">For details contact</p>
+                        <p class="title primary weight8">{{partnerDetails.partnerName}}</p>
+                    </div>
+                </div>
+                <div class="bottomYellowShade" style="width:220px">
+                    <div class="bottomGreenShade">
+                        <div class="f12" style="margin: 0px;padding-top: 10px;">{{partnerDetails.partnerMobile}}</div>
+                        <div class="f10" style="margin-left: -18px;">{{partnerDetails.partnerEmail}}</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="new-page textCenter page-break" id="Page-6" style="height: 842px;">
+        <div class="leaf2"></div>
+        <div class="banner2">
+            <div class="white" style="width: 433px; margin: 0px auto;padding-top: 42px;">
+                <div class="weight7" style="font-size: 30px;">Thank You {{fixStringLength customerName '25'}}.</div>
+                <div class="f18 weight5" style="padding: 5px 15px;">If you have any doubts or need clarity on anything
+                    feel free to connect with me.</div> {{#ifEquals partnerDetails.gender 'female'}}<img
+                    style="width: 184px;margin: 25px 0px 12px 0px;"
+                    src="https://catalog.mintpro.in/LIFE/FP_REPORT/dpFemale2.png" alt=""> {{/ifEquals}}
+                {{#ifNotEquals partnerDetails.gender 'female'}}<img style="width: 184px;margin: 25px 0px 12px 0px;"
+                    src="https://catalog.mintpro.in/LIFE/FP_REPORT/dpcoverlogo2.png" alt=""> {{/ifNotEquals}}
+                <div class="f24 weight7">{{#ifEquals partnerDetails.gender 'female'}} Ms. {{/ifEquals}}
+                    {{#ifNotEquals partnerDetails.gender 'female'}} Mr. {{/ifNotEquals}}
+                    {{partnerDetails.partnerName}}
+                </div>
+                <div class="f18 top5"><img src="https://catalog.mintpro.in/LIFE/FP_REPORT/phone.svg" alt=""
+                        style="margin-bottom: -2px;"> {{partnerDetails.partnerMobile}}</div>
+                <div class="f18 top4" style="padding-bottom: 20px; border-bottom: 1px solid #ffffff;"><img
+                        src="https://catalog.mintpro.in/LIFE/FP_REPORT/envelope.svg" alt=""
+                        style="margin-bottom: -5px;"> {{partnerDetails.partnerEmail}}</div>
+                <ul class="tripple" style="margin-top: 20px;">
+                    <li class="feature-dp" style="width: 130px;"><img class="close"
+                            src="https://catalog.mintpro.in/LIFE/FP_REPORT/phonebook.svg" alt="">
+                        <div class="obs-dp-type">
+                            <div class="f14">Certified POSP Agent</div>
+                        </div>
+                    </li>
+                    <li class="feature-dp" style="margin-left: 30px;width: 130px;"><img class="close"
+                            src="https://catalog.mintpro.in/LIFE/FP_REPORT/advicetick.svg" alt="">
+                        <div class="obs-dp-type">
+                            <div class="f14">Best Advice Guaranteed</div>
+                        </div>
+                    </li>
+                    <li class="feature-dp" style="margin-left: 30px;width: 110px;"><img class="close"
+                            src="https://catalog.mintpro.in/LIFE/FP_REPORT/supportstar.svg" alt="">
+                        <div class="obs-dp-type">
+                            <div class="f14">24x7 Call Support</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="weight6 f16 dipFlex" style="margin-bottom: 16px;position: absolute;bottom: 90px;">
+            <div class="padR8" style="border-right: 1px solid #C4C4C4;width: 295px;">
+                <div class="weight4" style="color:#7B7B7B;text-align: left;padding: 10px 33px 10px 120px;">
+                    <div>powered by</div><img src="https://catalog.mintpro.in/LIFE/FP_REPORT/tm-green-logo.png" alt=""
+                        style="width: 150px;">
+                </div>
+            </div>
+            <div class="f14 grey2 weight4" style="width: 172px;margin-left: 23px; text-align: left;padding: 12px 10px;">
+                Turtlemint Insurance Broking Services Pvt Ltd IRDAI License No. 487</div>
+        </div>
+        <div class="textCenter grey f8 pad6 disclaimer" style="bottom: 40px; width: 375px;left: 60px; ">Disclaimer:
+            Insurance is a subject matter of solicitation. For more details on policy terms, conditions, exclusions,
+            limitations, please refer/read policy brochure before concluding sale.</div>
+    </div>
+</div>
